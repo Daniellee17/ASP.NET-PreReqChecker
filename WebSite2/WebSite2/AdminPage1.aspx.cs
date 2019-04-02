@@ -318,12 +318,12 @@ public partial class AdminPage1 : System.Web.UI.Page
 
 
                     ////////// PASSWORD ////////////////
-                    //SqlCommand usernameCMD = new SqlCommand("SELECT Password FROM FinalTable WHERE Username=@Username", sqlCon1);
-                    //usernameCMD.Parameters.AddWithValue("@Username", TextBox2.Text.Trim());
-                    // object valueusernameCMD = usernameCMD.ExecuteScalar();
-                    // if (valueusernameCMD != null)
-                    // LBL_Password1.Text = valueusernameCMD.ToString();
-                    LBL_Password1.Text = "Hidden";
+                    SqlCommand usernameCMD1 = new SqlCommand("SELECT Password FROM FinalTable WHERE UserID=@id", sqlCon1);
+                    usernameCMD1.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    object valueusernameCMD1 = usernameCMD1.ExecuteScalar();
+                     if (valueusernameCMD1 != null)
+                     LBL_Password1.Text = valueusernameCMD1.ToString();
+                 
 
 
                     ////////// TYPE ////////////////
@@ -404,9 +404,9 @@ public partial class AdminPage1 : System.Web.UI.Page
                     ////////// USERNAME ////////////////
                     SqlCommand usernameCMD = new SqlCommand("SELECT Username FROM FinalTable WHERE UserID=@id", sqlCon1);
                     usernameCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers1.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valueusernameCMD = usernameCMD.ExecuteScalar();
-                    if (valueusernameCMD != null)
-                        LBL_Username1.Text = valueusernameCMD.ToString();
+                    object valueusernameCMD1 = usernameCMD.ExecuteScalar();
+                    if (valueusernameCMD1 != null)
+                        LBL_Username1.Text = valueusernameCMD1.ToString();
 
 
                     ////////// EMAIL ////////////////
@@ -418,12 +418,12 @@ public partial class AdminPage1 : System.Web.UI.Page
 
 
                     ////////// PASSWORD ////////////////
-                    //SqlCommand usernameCMD = new SqlCommand("SELECT Password FROM FinalTable WHERE Username=@Username", sqlCon1);
-                    //usernameCMD.Parameters.AddWithValue("@Username", TextBox2.Text.Trim());
-                    // object valueusernameCMD = usernameCMD.ExecuteScalar();
-                    // if (valueusernameCMD != null)
-                    // LBL_Password1.Text = valueusernameCMD.ToString();
-                    LBL_Password1.Text = "Hidden";
+                    SqlCommand usernameCMDq = new SqlCommand("SELECT Password FROM FinalTable WHERE Username=@Username", sqlCon1);
+                    usernameCMDq.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers1.DataKeys[gvr.RowIndex].Value.ToString()));
+                    object valueusernameCMD11 = usernameCMDq.ExecuteScalar();
+                     if (valueusernameCMD11 != null)
+                     LBL_Password1.Text = valueusernameCMD11.ToString();
+
 
 
                     ////////// TYPE ////////////////

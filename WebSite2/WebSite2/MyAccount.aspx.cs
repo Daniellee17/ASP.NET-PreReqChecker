@@ -101,12 +101,11 @@ public partial class MyAccount : System.Web.UI.Page
 
 
             ////////// PASSWORD ////////////////
-            //SqlCommand bbb = new SqlCommand("SELECT Password FROM FinalTable WHERE Username=@Username", sqlCon1);
-            //bbb.Parameters.AddWithValue("@Username", Tb1.Text.Trim());
-            //object valuebbb = bbb.ExecuteScalar();
-            //if (valuebbb != null)
-            //   LBL_Password.Text = valuebbb.ToString();
-            LBL_Password.Text = "Hiddden";
+            SqlCommand bbb = new SqlCommand("SELECT Password FROM FinalTable WHERE Username=@Username", sqlCon1);
+            bbb.Parameters.AddWithValue("@Username", Tb1.Text.Trim());
+            object valuebbb = bbb.ExecuteScalar();
+            if (valuebbb != null)
+            LBL_Password.Text = valuebbb.ToString();
 
            ////////// TYPE ////////////////
            SqlCommand c = new SqlCommand("SELECT Type FROM FinalTable WHERE Username=@Username", sqlCon1);
