@@ -20,14 +20,14 @@
         body {
             margin: 0;
             padding: 0;
-            background: url(images/bg3.png);
+            background: url(images/bg.jpg);
             background-size: cover;
         }
 
         .loginBox {
             width: 320px;
             height: 410px;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
             top: 50%;
             left: 50%;
@@ -39,11 +39,10 @@
         }
 
         .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 120px;
+            height: 120px;
             position: absolute;
-            top: -40px;
+            top: -52px;
             left: calc(50% - 50px);
         }
 
@@ -80,7 +79,7 @@
                 border: none;
                 outline: none;
                 height: 40px;
-                background: #31BDC9;
+                background: #110A28;
                 color: #fff;
                 font-size: 18px;
                 border-radius: 20px;
@@ -88,7 +87,7 @@
 
                 .loginBox input[type="submit"]:hover {
                     cursor: pointer;
-                    background: #39dc79;
+                    background: #381357;
                     color: #000;
                 }
 
@@ -130,20 +129,20 @@
             left: 0;
             width: 100%;
             height: 63px;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0);
             padding: 0 100px;
             box-sizing: border-box;
         }
 
             nav .brand h2 {
                 padding: 0;
-                margin: 0;
+                margin: 18px, 0;
                 color: #fff;
                 float: left;
                 height: 100%;
                 line-height: 65px;
                 font-family: marc;
-                font-size: 20px;
+                font-size: 22px;
             }
 
             nav ul {
@@ -160,9 +159,9 @@
                     nav ul li a {
                         position: relative;
                         display: block;
-                        height: 32px;
+                        height: 50px;
                         line-height: 0px;
-                        padding: 0 16px;
+                        padding: 0 25px;
                         box-sizing: border-box;
                         color: #fff;
                         text-decoration: none;
@@ -214,7 +213,7 @@
         </div>
 
         <div class="loginBox">
-            <img src="images/login2.jpg" class="avatar" />
+            <img src="images/alien.gif" class="avatar" />
             <h1>LOGIN</h1>
 
             <p>Username</p>
