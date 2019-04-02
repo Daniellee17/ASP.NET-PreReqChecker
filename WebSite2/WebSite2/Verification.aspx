@@ -5,10 +5,10 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        body {
+         body {
             margin: 0;
             padding: 0;
-            background: url(images/bg3.png);
+            background: url(images/bg.jpg);
             background-size: cover;
         }
 

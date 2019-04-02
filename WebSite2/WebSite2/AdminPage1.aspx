@@ -15,11 +15,10 @@
             font-family: bunge;
         }
 
-
-        body {
+    body {
             margin: 0;
             padding: 0;
-            background: url(images/bg3.png);
+            background: url(images/bg.jpg);
             background-size: cover;
         }
 
@@ -278,26 +277,25 @@
                     color: #39dc79;
                 }
 
-
-        nav {
+nav {
             top: 0;
             left: 0;
             width: 100%;
             height: 63px;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0);
             padding: 0 100px;
             box-sizing: border-box;
         }
 
             nav .brand h2 {
                 padding: 0;
-                margin: 0;
+                margin: 18px, 0;
                 color: #fff;
                 float: left;
                 height: 100%;
                 line-height: 65px;
                 font-family: marc;
-                font-size: 20px;
+                font-size: 22px;
             }
 
             nav ul {
@@ -314,9 +312,9 @@
                     nav ul li a {
                         position: relative;
                         display: block;
-                        height: 32px;
+                        height: 50px;
                         line-height: 0px;
-                        padding: 0 16px;
+                        padding: 0 25px;
                         box-sizing: border-box;
                         color: #fff;
                         text-decoration: none;
