@@ -164,11 +164,7 @@
 
         <asp:HiddenField ID="hfUserID" runat="server" />
 
-         <div class="buttonDane">
 
-            <asp:Button ID="BTN_Back" runat="server" Text="BACK" OnClick="BTN_Back_Click" />
-
-        </div>
 
 
         <div class="resetBox">
@@ -212,6 +208,7 @@
 
 
             <asp:Button ID="BTNenter" runat="server" Text="Submit" OnClick="BTNenter_Click" />
+            <asp:Button ID="BTN_Back" runat="server" Text="BACK" OnClick="BTN_Back_Click" />
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
 
