@@ -26,7 +26,7 @@
         .login-box {
             width: 540px;
             height: 550px;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
             top: 50%;
             left: 50%;

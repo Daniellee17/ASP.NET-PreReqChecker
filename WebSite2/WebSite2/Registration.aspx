@@ -26,7 +26,7 @@
         .registerBox {
             width: 600px;
             height: 690px;
-            background: rgba(0, 0, 0, 0.4);
+           background: rgba(0, 0, 0, 0.8);
             color: #fff;
             top: 50%;
             left: 50%;

@@ -7,15 +7,23 @@
     <title></title>
     <style type="text/css">
         @font-face {
+            src: url(fonts/OpenSansCondensed-Light.ttf);
+            font-family: banger;
+        }
+
+        @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
 
+      
+
         @font-face {
-            src: url(fonts/BungeeInline-Regular.ttf);
-            font-family: bunge;
+            src: url(fonts/KaushanScript-Regular.ttf);
+            font-family: mech;
         }
-    body {
+
+        body {
             margin: 0;
             padding: 0;
             background: url(images/bg.jpg);
@@ -24,13 +32,12 @@
 
 
         .generalLabel {
-              top: 71%;
+            top: 71%;
             left: 50%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
             padding: 70px 30px;
-            font-family: sans-serif;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -40,19 +47,36 @@
         }
 
 
-            .generalLabel2 {
-            top: 50%;
+        .mainLabel {
+            top: 47%;
             left: 50%;
+            width: 100%;
+            position: absolute;
+            display: inherit inline;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: banger;
+            font-size: 150px;
+            color: white;
+        }
+
+        .subLabel {
+            top: 60%;
+            left: 50%;
+            width: 100%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
             padding: 70px 30px;
-            font-family: sans-serif;
+            font-family: mech;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            font-family: sans-serif;
-            font-size: 40px;
+            font-size: 60px;
             color: white;
         }
 
@@ -128,8 +152,8 @@
                     <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
                 </a></li>
 
-                
-                  <li><a>
+
+                <li><a>
                     <asp:LinkButton ID="LB_contact" runat="server" OnClick="LB_contact_Click" Text="CONTACT"> </asp:LinkButton>
                 </a></li>
 
@@ -142,17 +166,24 @@
 
 
 
-       
+
         <div class="generalLabel">
 
             <asp:Label ID="LBLerror" runat="server" Text=""></asp:Label>
 
         </div>
 
-        <div class="generalLabel2">
+        <div class="mainLabel">
 
-            <asp:Label ID="Label1" runat="server" Text="HOME PAGE"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="MECHANICAL ENGINEERING"></asp:Label>
 
+
+
+        </div>
+
+        <div class="subLabel">
+
+            <asp:Label ID="Label4" runat="server" Text="Pre-requesite Checker"></asp:Label>
 
 
         </div>

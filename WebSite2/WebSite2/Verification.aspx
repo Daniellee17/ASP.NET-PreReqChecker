@@ -15,7 +15,7 @@
         .verificationBox {
             width: 300px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.4);
+           background: rgba(0, 0, 0, 0.8);
             color: #fff;
             top: 50%;
             left: 50%;

@@ -31,7 +31,7 @@
             width: 68px;
             left: 0%;
             position: absolute;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
             font-size: 14px;
             margin-left: 5px;
