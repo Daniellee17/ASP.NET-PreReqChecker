@@ -293,14 +293,14 @@
         </div>
 
 
-        <div class="approvedBox">
+        <div class="viewBox">
 
             <h1>COURSE LIST</h1>
 
 
             <asp:GridView ID="gvUsers" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
                 ShowFooter="true"
-                DataKeyNames="UserID"
+                DataKeyNames="id"
                 ShowHeaderWhenEmpty="true"
                 OnRowCommand="gvUsers_RowCommand"
                 
@@ -317,6 +317,7 @@
                 <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
 
                 <Columns>
+
 
 
 
@@ -343,16 +344,8 @@
                         </FooterTemplate>
                     </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
-                        <ItemTemplate>
-                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
-                        </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                        </FooterTemplate>
-                    </asp:TemplateField>
+
+
 
 
 
@@ -366,43 +359,13 @@
 
 
 
-        <div class="viewBox">
+        <div class="approvedBox">
 
             <h1>DETAILS</h1>
 
-            <p>Full Name</p>
-            <asp:Label ID="LBL_FullName1" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
+            <p>Course</p>
+            <asp:Label ID="LBL_Course" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
             <br />
-
-            <p>Contact Number</p>
-            <asp:Label ID="LBL_Contact1" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
-            <br />
-
-
-            <p>Username</p>
-            <asp:Label ID="LBL_Username1" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
-            <br />
-
-
-
-            <p>Email Address</p>
-            <asp:Label ID="LBL_Email1" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
-            <br />
-            <p>Password</p>
-            <asp:Label ID="LBL_Password1" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
-            <br />
-            <p>Type</p>
-
-
-            <asp:Label ID="LBL_Type1" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
-            <br />
-
-            <p>Verified</p>
-
-
-            <asp:Label ID="LBL_Verified1" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
-
-
 
         </div>
 

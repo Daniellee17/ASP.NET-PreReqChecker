@@ -24,7 +24,7 @@ public partial class Courses : System.Web.UI.Page
             loggedin = 1;
 
             LB_reg.Text = "Experiments";
-            LBL_FullName1.Text = LBL_Contact1.Text = LBL_Email1.Text = LBL_Password1.Text = LBL_Type1.Text = LBL_Username1.Text = LBL_Verified1.Text = "User not found";
+          //  LBL_FullName1.Text = LBL_Contact1.Text = LBL_Email1.Text = LBL_Password1.Text = LBL_Type1.Text = LBL_Username1.Text = LBL_Verified1.Text = "User not found";
             if (Session["Type"] == "Administrator")
             {
 
@@ -176,64 +176,16 @@ public partial class Courses : System.Web.UI.Page
 
 
                     ////////// FIRST NAME AND LAST NAME ////////////////
-                    SqlCommand a = new SqlCommand("SELECT FirstName FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    a.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valuea = a.ExecuteScalar();
-
-                    SqlCommand a2 = new SqlCommand("SELECT LastName FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    a2.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valuea2 = a2.ExecuteScalar();
-
-                    if (valuea != null)
-                        LBL_FullName1.Text = valuea.ToString() + " " + valuea2.ToString();
+                    SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable118 WHERE id=@id", sqlCon1);
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    object VcourseCMD = courseCMD.ExecuteScalar();
 
 
-                    ////////// CONTACT ////////////////
-                    SqlCommand b = new SqlCommand("SELECT Contact FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    b.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valueb = b.ExecuteScalar();
-                    if (valueb != null)
-                        LBL_Contact1.Text = valueb.ToString();
-
-                    ////////// USERNAME ////////////////
-                    SqlCommand usernameCMD = new SqlCommand("SELECT Username FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    usernameCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valueusernameCMD = usernameCMD.ExecuteScalar();
-                    if (valueusernameCMD != null)
-                        LBL_Username1.Text = valueusernameCMD.ToString();
+                    if (VcourseCMD != null)
+                        LBL_Course.Text = VcourseCMD.ToString();
 
 
-                    ////////// EMAIL ////////////////
-                    SqlCommand bb = new SqlCommand("SELECT Email FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    bb.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valuebb = bb.ExecuteScalar();
-                    if (valuebb != null)
-                        LBL_Email1.Text = valuebb.ToString();
-
-
-                    ////////// PASSWORD ////////////////
-                    SqlCommand usernameCMD1 = new SqlCommand("SELECT Password FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    usernameCMD1.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valueusernameCMD1 = usernameCMD1.ExecuteScalar();
-                    if (valueusernameCMD1 != null)
-                        LBL_Password1.Text = valueusernameCMD1.ToString();
-
-
-
-                    ////////// TYPE ////////////////
-                    SqlCommand c = new SqlCommand("SELECT Type FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    c.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object value = c.ExecuteScalar();
-                    if (value != null)
-                        LBL_Type1.Text = value.ToString();
-
-
-                    ////////// VERIFIED ////////////////
-                    SqlCommand cc = new SqlCommand("SELECT Verified FROM FinalTable WHERE UserID=@id", sqlCon1);
-                    cc.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
-                    object valuecc = cc.ExecuteScalar();
-                    if (valuecc != null)
-                        LBL_Verified1.Text = valuecc.ToString();
+           
 
 
 
