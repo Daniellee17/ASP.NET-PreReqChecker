@@ -233,7 +233,7 @@
 
         <div class="subLabel">
 
-            <asp:Label ID="Label4" runat="server" Text="Pre-requesite Checker"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Pre-requisite Checker"></asp:Label>
 
 
         </div>
