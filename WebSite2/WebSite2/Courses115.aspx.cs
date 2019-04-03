@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 
-public partial class Courses : System.Web.UI.Page
+public partial class Courses115 : System.Web.UI.Page
 {
     string connectionString = @"Data Source=MSI-DANE;Initial Catalog=ageDB;Integrated Security=True;";
     int admin = 0;
@@ -24,7 +24,7 @@ public partial class Courses : System.Web.UI.Page
             loggedin = 1;
 
             LB_reg.Text = "Experiments";
-          //  LBL_FullName1.Text = LBL_Contact1.Text = LBL_Email1.Text = LBL_Password1.Text = LBL_Type1.Text = LBL_Username1.Text = LBL_Verified1.Text = "User not found";
+            //  LBL_FullName1.Text = LBL_Contact1.Text = LBL_Email1.Text = LBL_Password1.Text = LBL_Type1.Text = LBL_Username1.Text = LBL_Verified1.Text = "User not found";
             if (Session["Type"] == "Administrator")
             {
 
@@ -64,7 +64,7 @@ public partial class Courses : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable118", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -102,7 +102,7 @@ public partial class Courses : System.Web.UI.Page
 
     }
 
-    
+
     protected void LB_contact_Click(object sender, EventArgs e)
     {
         Response.Redirect("Contact.aspx");
@@ -171,7 +171,7 @@ public partial class Courses : System.Web.UI.Page
                 {
                     sqlCon1.Open();
 
-                    SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable118 WHERE id=@id", sqlCon1);
+                    SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
                     courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
@@ -179,7 +179,7 @@ public partial class Courses : System.Web.UI.Page
                     else
                         LBL_Course.Text = "None";
 
-                    SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable118 WHERE id=@id", sqlCon1);
+                    SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
                     courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
@@ -187,7 +187,7 @@ public partial class Courses : System.Web.UI.Page
                     else
                         LBL_CourseTitle.Text = "None";
 
-                    SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable118 WHERE id=@id", sqlCon1);
+                    SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
                     unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
@@ -195,7 +195,7 @@ public partial class Courses : System.Web.UI.Page
                     else
                         LBL_Units.Text = "None";
 
-                    SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable118 WHERE id=@id", sqlCon1);
+                    SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
                     softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
@@ -203,7 +203,7 @@ public partial class Courses : System.Web.UI.Page
                     else
                         LBL_Soft.Text = "None";
 
-                    SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable118 WHERE id=@id", sqlCon1);
+                    SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
                     coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
@@ -212,7 +212,7 @@ public partial class Courses : System.Web.UI.Page
                         LBL_Co.Text = "None";
 
 
-                    SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable118 WHERE id=@id", sqlCon1);
+                    SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
                     hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
@@ -260,7 +260,7 @@ public partial class Courses : System.Web.UI.Page
         {
             sqlCon1.Open();
 
-            SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable118 WHERE Course=@Course", sqlCon1);
+            SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE Course=@Course", sqlCon1);
             courseCMD.Parameters.AddWithValue("@Course", TB_Search.Text.Trim());
             object VcourseCMD = courseCMD.ExecuteScalar();
             if (VcourseCMD != null)
@@ -268,7 +268,7 @@ public partial class Courses : System.Web.UI.Page
             else
                 LBL_Course.Text = "-";
 
-            SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable118 WHERE Course=@Course", sqlCon1);
+            SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE Course=@Course", sqlCon1);
             courseTitleCMD.Parameters.AddWithValue("@Course", TB_Search.Text.Trim());
             object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
             if (VcourseTitleCMD != null)
@@ -276,7 +276,7 @@ public partial class Courses : System.Web.UI.Page
             else
                 LBL_CourseTitle.Text = "-";
 
-            SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable118 WHERE Course=@Course", sqlCon1);
+            SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE Course=@Course", sqlCon1);
             unitsCMD.Parameters.AddWithValue("@Course", TB_Search.Text.Trim());
             object vunitsCMD = unitsCMD.ExecuteScalar();
             if (vunitsCMD != null)
@@ -284,7 +284,7 @@ public partial class Courses : System.Web.UI.Page
             else
                 LBL_Units.Text = "-";
 
-            SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable118 WHERE Course=@Course", sqlCon1);
+            SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE Course=@Course", sqlCon1);
             softCMD.Parameters.AddWithValue("@Course", TB_Search.Text.Trim());
             object vsoftCMD = softCMD.ExecuteScalar();
             if (vsoftCMD != null)
@@ -292,7 +292,7 @@ public partial class Courses : System.Web.UI.Page
             else
                 LBL_Soft.Text = "-";
 
-            SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable118 WHERE Course=@Course", sqlCon1);
+            SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE Course=@Course", sqlCon1);
             coCMD.Parameters.AddWithValue("@Course", TB_Search.Text.Trim());
             object vcoCMD = coCMD.ExecuteScalar();
             if (vcoCMD != null)
@@ -301,7 +301,7 @@ public partial class Courses : System.Web.UI.Page
                 LBL_Co.Text = "-";
 
 
-            SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable118 WHERE Course=@Course", sqlCon1);
+            SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE Course=@Course", sqlCon1);
             hardCMD.Parameters.AddWithValue("@Course", TB_Search.Text.Trim());
             object vhardCMD = hardCMD.ExecuteScalar();
             if (vhardCMD != null)

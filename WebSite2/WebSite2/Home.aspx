@@ -16,7 +16,7 @@
             font-family: marc;
         }
 
-      
+
 
         @font-face {
             src: url(fonts/KaushanScript-Regular.ttf);
@@ -28,6 +28,56 @@
             padding: 0;
             background: url(images/bg.jpg);
             background-size: cover;
+        }
+
+        .button118 input[type="submit"] {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            height: 33px;
+            width: 68px;
+            left: 45%;
+            top: 70%;
+            position: absolute;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            font-size: 14px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+            .button118 input[type="submit"]:hover {
+                cursor: pointer;
+                color: #262626;
+                transition: .3s;
+            }
+
+        }
+
+        .button115 input[type="submit"] {
+             margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            height: 33px;
+            width: 68px;
+            left: 55%;
+            top: 70%;
+            position: absolute;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            font-size: 14px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+            .button115 input[type="submit"]:hover {
+                cursor: pointer;
+                color: #262626;
+                transition: .3s;
+            }
+
         }
 
 
@@ -187,6 +237,23 @@
 
 
         </div>
+
+        <div class="button118">
+
+            <asp:Button ID="BTN_118" runat="server" Text="New Curriculum" OnClick="BTN_118_Click"/>
+
+
+        </div>
+
+           <div class="button115">
+
+               <asp:Button ID="BTN_115" runat="server" Text="Old Curriculum" OnClick="BTN_115_Click"/>
+
+
+           </div>
+
+
+
     </form>
 </body>
 </html>

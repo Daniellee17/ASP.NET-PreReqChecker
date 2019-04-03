@@ -122,4 +122,23 @@ public partial class Home : System.Web.UI.Page
         }
     }
 
+    protected void BTN_118_Click(object sender, EventArgs e)
+    {
+       
+            Response.Redirect("Courses.aspx");
+        
+
+        
+    }
+
+
+    protected void BTN_115_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("Courses115.aspx");
+
+
+
+    }
+
 }
