@@ -30,55 +30,40 @@
             background-size: cover;
         }
 
-        .button118 input[type="submit"] {
-            margin: 0;
-            padding: 0;
+
+        .buttons input[type="submit"] {
+            top: 66%;
+            position: absolute;
+            left: 50%;
             border: none;
             outline: none;
-            height: 33px;
-            width: 68px;
-            left: 45%;
-            top: 70%;
-            position: absolute;
-            background: rgba(0,0,0,0.3);
+           
+            
+            background: #110A28;
             color: #fff;
-            font-size: 14px;
-            margin-left: 5px;
-            margin-top: 5px;
+            font-size: 30px;
+            
+            display: inherit inline;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 15px 25px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: banger;
+           
+            color: white;
         }
 
-            .button118 input[type="submit"]:hover {
+            .buttons input[type="submit"]:hover {
                 cursor: pointer;
-                color: #262626;
-                transition: .3s;
+                background: #381357;
+                color: #000;
             }
 
         }
 
-        .button115 input[type="submit"] {
-             margin: 0;
-            padding: 0;
-            border: none;
-            outline: none;
-            height: 33px;
-            width: 68px;
-            left: 55%;
-            top: 70%;
-            position: absolute;
-            background: rgba(0,0,0,0.3);
-            color: #fff;
-            font-size: 14px;
-            margin-left: 5px;
-            margin-top: 5px;
-        }
-
-            .button115 input[type="submit"]:hover {
-                cursor: pointer;
-                color: #262626;
-                transition: .3s;
-            }
-
-        }
+       
 
 
         .generalLabel {
@@ -98,7 +83,7 @@
 
 
         .mainLabel {
-            top: 47%;
+            top: 44%;
             left: 50%;
             width: 100%;
             position: absolute;
@@ -115,7 +100,7 @@
         }
 
         .subLabel {
-            top: 60%;
+            top: 56%;
             left: 50%;
             width: 100%;
             position: absolute;
@@ -203,9 +188,6 @@
                 </a></li>
 
 
-                <li><a>
-                    <asp:LinkButton ID="LB_contact" runat="server" OnClick="LB_contact_Click" Text="CONTACT"> </asp:LinkButton>
-                </a></li>
 
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
@@ -238,19 +220,22 @@
 
         </div>
 
-        <div class="button118">
+        <div class="buttons">
 
-            <asp:Button ID="BTN_118" runat="server" Text="New Curriculum" OnClick="BTN_118_Click"/>
+            <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" />
+            <br />
+            <br />
+            <asp:Button ID="BTN_115" runat="server" Text="ID 115 and Below" OnClick="BTN_115_Click" Style="top: 74%" />
+                <br />
+            <br />
+            <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 82%; width: 220px" />
 
 
         </div>
 
-           <div class="button115">
-
-               <asp:Button ID="BTN_115" runat="server" Text="Old Curriculum" OnClick="BTN_115_Click"/>
 
 
-           </div>
+
 
 
 

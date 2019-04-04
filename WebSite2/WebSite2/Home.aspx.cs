@@ -141,4 +141,13 @@ public partial class Home : System.Web.UI.Page
 
     }
 
+    protected void BTN_ContactUs_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("Contact.aspx");
+
+
+
+    }
+
 }

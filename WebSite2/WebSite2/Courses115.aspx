@@ -40,7 +40,7 @@
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
-            padding: 70px 30px;
+           
             font-family: mech;
             margin-left: auto;
             margin-right: auto;
@@ -153,7 +153,7 @@
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
             top: 40%;
-            left: 25%;
+            left: 26%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -177,7 +177,7 @@
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
             top: 40%;
-            left: 40%;
+            left: 42%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -203,7 +203,7 @@
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
             top: 40%;
-            left: 55%;
+            left: 58%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -230,7 +230,7 @@
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
             top: 40%;
-            left: 70%;
+            left: 74%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -264,7 +264,7 @@
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
             top: 40%;
-            left: 85%;
+            left: 90%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -290,7 +290,7 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 80%;
+            top: 83%;
             left: 10%;
             position: absolute;
             transform: translate(-50%,-50%);
@@ -317,8 +317,8 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 80%;
-            left: 25%;
+            top: 83%;
+            left: 26%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -344,8 +344,8 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 80%;
-            left: 40%;
+            top: 83%;
+            left: 42%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -370,8 +370,8 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 80%;
-            left: 55%;
+            top: 83%;
+            left: 58%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -397,8 +397,8 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 80%;
-            left: 70%;
+            top: 83%;
+            left: 74%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -422,8 +422,8 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 110%;
-            left: 10%;
+            top: 83%;
+            left: 90%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -448,8 +448,8 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 110%;
-            left: 25%;
+            top: 126%;
+            left: 10%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -475,8 +475,8 @@
             height: 390px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            top: 110%;
-            left: 40%;
+            top: 126%;
+            left: 26%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -568,10 +568,6 @@
                     <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
                 </a></li>
 
-
-                <li><a>
-                    <asp:LinkButton ID="LB_contact" runat="server" OnClick="LB_contact_Click" Text="CONTACT"> </asp:LinkButton>
-                </a></li>
 
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
@@ -915,12 +911,100 @@
         <div class="listBox7">
 
             <h1>TERM SEVEN</h1>
+            <asp:GridView ID="gvUsers7" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers7_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
 
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View7"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
         </div>
         <div class="listBox8">
 
             <h1>TERM EIGHT</h1>
+            <asp:GridView ID="gvUsers8" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers8_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
 
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View8"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
 
 
 
@@ -928,7 +1012,51 @@
         <div class="listBox9">
 
             <h1>TERM NINE</h1>
+            <asp:GridView ID="gvUsers9" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers9_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
 
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View9"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
 
 
 
@@ -936,25 +1064,201 @@
         <div class="listBox10">
 
             <h1>TERM TEN</h1>
+            <asp:GridView ID="gvUsers10" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers10_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
 
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View10"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
 
         </div>
         <div class="listBox11">
 
             <h1>TERM ELEVEN</h1>
+            <asp:GridView ID="gvUsers11" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers11_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
 
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View11"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
 
 
         </div>
         <div class="listBox12">
 
             <h1>TERM TWELVE</h1>
+            <asp:GridView ID="gvUsers12" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers12_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
 
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View12"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
         </div>
         <div class="listBox13">
 
             <h1>TERM THIRTEEN</h1>
+            <asp:GridView ID="gvUsers13" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers13_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
 
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View13"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
 
 
         </div>

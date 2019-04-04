@@ -121,4 +121,12 @@ public partial class Contact : System.Web.UI.Page
         }
     }
 
+    protected void BTN_Back_Click(object sender, EventArgs e)
+    {
+        
+            Response.Redirect("Home.aspx");
+       
+    }
+  
+
 }

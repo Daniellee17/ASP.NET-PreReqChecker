@@ -196,9 +196,7 @@
                     <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
                 </a></li>
 
-                  <li><a>
-                    <asp:LinkButton ID="LB_contact" runat="server" OnClick="LB_contact_Click" Text="CONTACT"  Style="color: #31BDC9"> </asp:LinkButton>
-                </a></li>
+                
 
 
                 <li><a>
@@ -210,6 +208,7 @@
 
 
          <div class="contactBox">
+             <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" />
             <img src="images/phone.png" class="avatar" />
             <h1>CONTACT US</h1>
 

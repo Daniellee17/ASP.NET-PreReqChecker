@@ -56,6 +56,13 @@ public partial class Courses115 : System.Web.UI.Page
             popT4();
             popT5();
             popT6();
+            popT7();
+            popT8();
+            popT9();
+            popT10();
+            popT11();
+            popT12();
+            popT13();
         }
     }
 
@@ -269,7 +276,253 @@ public partial class Courses115 : System.Web.UI.Page
         {
         }
     }
-  
+    void popT7()
+    {
+        try
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '7th Term'", sqlCon);
+                sqlDa.Fill(dtbl);
+
+            }
+
+            if (dtbl.Rows.Count > 0)
+            {
+                gvUsers7.DataSource = dtbl;
+                gvUsers7.DataBind();
+            }
+
+            else
+            {
+                dtbl.Rows.Add(dtbl.NewRow());
+                gvUsers7.DataSource = dtbl;
+                gvUsers7.DataBind();
+                gvUsers7.Rows[0].Cells.Clear();
+                gvUsers7.Rows[0].Cells.Add(new TableCell());
+                gvUsers7.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                gvUsers7.Rows[0].Cells[0].Text = "No Data Found...";
+                gvUsers7.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    void popT8()
+    {
+        try
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '8th Term'", sqlCon);
+                sqlDa.Fill(dtbl);
+
+            }
+
+            if (dtbl.Rows.Count > 0)
+            {
+                gvUsers8.DataSource = dtbl;
+                gvUsers8.DataBind();
+            }
+
+            else
+            {
+                dtbl.Rows.Add(dtbl.NewRow());
+                gvUsers8.DataSource = dtbl;
+                gvUsers8.DataBind();
+                gvUsers8.Rows[0].Cells.Clear();
+                gvUsers8.Rows[0].Cells.Add(new TableCell());
+                gvUsers8.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                gvUsers8.Rows[0].Cells[0].Text = "No Data Found...";
+                gvUsers8.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    void popT9()
+    {
+        try
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '9th Term'", sqlCon);
+                sqlDa.Fill(dtbl);
+
+            }
+
+            if (dtbl.Rows.Count > 0)
+            {
+                gvUsers9.DataSource = dtbl;
+                gvUsers9.DataBind();
+            }
+
+            else
+            {
+                dtbl.Rows.Add(dtbl.NewRow());
+                gvUsers9.DataSource = dtbl;
+                gvUsers9.DataBind();
+                gvUsers9.Rows[0].Cells.Clear();
+                gvUsers9.Rows[0].Cells.Add(new TableCell());
+                gvUsers9.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                gvUsers9.Rows[0].Cells[0].Text = "No Data Found...";
+                gvUsers9.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    void popT10()
+    {
+        try
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '10th Term'", sqlCon);
+                sqlDa.Fill(dtbl);
+
+            }
+
+            if (dtbl.Rows.Count > 0)
+            {
+                gvUsers10.DataSource = dtbl;
+                gvUsers10.DataBind();
+            }
+
+            else
+            {
+                dtbl.Rows.Add(dtbl.NewRow());
+                gvUsers10.DataSource = dtbl;
+                gvUsers10.DataBind();
+                gvUsers10.Rows[0].Cells.Clear();
+                gvUsers10.Rows[0].Cells.Add(new TableCell());
+                gvUsers10.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                gvUsers10.Rows[0].Cells[0].Text = "No Data Found...";
+                gvUsers10.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    void popT11()
+    {
+        try
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '11th Term'", sqlCon);
+                sqlDa.Fill(dtbl);
+
+            }
+
+            if (dtbl.Rows.Count > 0)
+            {
+                gvUsers11.DataSource = dtbl;
+                gvUsers11.DataBind();
+            }
+
+            else
+            {
+                dtbl.Rows.Add(dtbl.NewRow());
+                gvUsers11.DataSource = dtbl;
+                gvUsers11.DataBind();
+                gvUsers11.Rows[0].Cells.Clear();
+                gvUsers11.Rows[0].Cells.Add(new TableCell());
+                gvUsers11.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                gvUsers11.Rows[0].Cells[0].Text = "No Data Found...";
+                gvUsers11.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    void popT12()
+    {
+        try
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '12th Term'", sqlCon);
+                sqlDa.Fill(dtbl);
+
+            }
+
+            if (dtbl.Rows.Count > 0)
+            {
+                gvUsers12.DataSource = dtbl;
+                gvUsers12.DataBind();
+            }
+
+            else
+            {
+                dtbl.Rows.Add(dtbl.NewRow());
+                gvUsers12.DataSource = dtbl;
+                gvUsers12.DataBind();
+                gvUsers12.Rows[0].Cells.Clear();
+                gvUsers12.Rows[0].Cells.Add(new TableCell());
+                gvUsers12.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                gvUsers12.Rows[0].Cells[0].Text = "No Data Found...";
+                gvUsers12.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    void popT13()
+    {
+        try
+        {
+            DataTable dtbl = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '13th Term'", sqlCon);
+                sqlDa.Fill(dtbl);
+
+            }
+
+            if (dtbl.Rows.Count > 0)
+            {
+                gvUsers13.DataSource = dtbl;
+                gvUsers13.DataBind();
+            }
+
+            else
+            {
+                dtbl.Rows.Add(dtbl.NewRow());
+                gvUsers13.DataSource = dtbl;
+                gvUsers13.DataBind();
+                gvUsers13.Rows[0].Cells.Clear();
+                gvUsers13.Rows[0].Cells.Add(new TableCell());
+                gvUsers13.Rows[0].Cells[0].ColumnSpan = dtbl.Columns.Count;
+                gvUsers13.Rows[0].Cells[0].Text = "No Data Found...";
+                gvUsers13.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+
+
 
     protected void LB_contact_Click(object sender, EventArgs e)
     {
@@ -795,7 +1048,7 @@ public partial class Courses115 : System.Web.UI.Page
 
         try
         {
-            if (e.CommandName.Equals("View0"))
+            if (e.CommandName.Equals("View7"))
             {
 
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
@@ -808,7 +1061,7 @@ public partial class Courses115 : System.Web.UI.Page
                     sqlCon1.Open();
 
                     SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers7.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
                         LBL_Course.Text = VcourseCMD.ToString();
@@ -816,7 +1069,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Course.Text = "None";
 
                     SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers7.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
                         LBL_CourseTitle.Text = VcourseTitleCMD.ToString();
@@ -824,7 +1077,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_CourseTitle.Text = "None";
 
                     SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers7.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
                         LBL_Units.Text = vunitsCMD.ToString();
@@ -832,7 +1085,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Units.Text = "None";
 
                     SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers7.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
                         LBL_Soft.Text = vsoftCMD.ToString();
@@ -840,7 +1093,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Soft.Text = "None";
 
                     SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers7.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
                         LBL_Co.Text = vcoCMD.ToString();
@@ -849,7 +1102,7 @@ public partial class Courses115 : System.Web.UI.Page
 
 
                     SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers7.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
                         LBL_Hard.Text = vhardCMD.ToString();
@@ -873,7 +1126,7 @@ public partial class Courses115 : System.Web.UI.Page
 
         try
         {
-            if (e.CommandName.Equals("View0"))
+            if (e.CommandName.Equals("View8"))
             {
 
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
@@ -886,7 +1139,7 @@ public partial class Courses115 : System.Web.UI.Page
                     sqlCon1.Open();
 
                     SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers8.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
                         LBL_Course.Text = VcourseCMD.ToString();
@@ -894,7 +1147,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Course.Text = "None";
 
                     SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers8.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
                         LBL_CourseTitle.Text = VcourseTitleCMD.ToString();
@@ -902,7 +1155,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_CourseTitle.Text = "None";
 
                     SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers8.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
                         LBL_Units.Text = vunitsCMD.ToString();
@@ -910,7 +1163,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Units.Text = "None";
 
                     SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers8.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
                         LBL_Soft.Text = vsoftCMD.ToString();
@@ -918,7 +1171,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Soft.Text = "None";
 
                     SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers8.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
                         LBL_Co.Text = vcoCMD.ToString();
@@ -927,7 +1180,7 @@ public partial class Courses115 : System.Web.UI.Page
 
 
                     SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers8.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
                         LBL_Hard.Text = vhardCMD.ToString();
@@ -951,7 +1204,7 @@ public partial class Courses115 : System.Web.UI.Page
 
         try
         {
-            if (e.CommandName.Equals("View0"))
+            if (e.CommandName.Equals("View9"))
             {
 
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
@@ -964,7 +1217,7 @@ public partial class Courses115 : System.Web.UI.Page
                     sqlCon1.Open();
 
                     SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers9.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
                         LBL_Course.Text = VcourseCMD.ToString();
@@ -972,7 +1225,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Course.Text = "None";
 
                     SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers9.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
                         LBL_CourseTitle.Text = VcourseTitleCMD.ToString();
@@ -980,7 +1233,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_CourseTitle.Text = "None";
 
                     SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers9.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
                         LBL_Units.Text = vunitsCMD.ToString();
@@ -988,7 +1241,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Units.Text = "None";
 
                     SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers9.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
                         LBL_Soft.Text = vsoftCMD.ToString();
@@ -996,7 +1249,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Soft.Text = "None";
 
                     SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers9.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
                         LBL_Co.Text = vcoCMD.ToString();
@@ -1005,7 +1258,7 @@ public partial class Courses115 : System.Web.UI.Page
 
 
                     SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers9.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
                         LBL_Hard.Text = vhardCMD.ToString();
@@ -1029,7 +1282,7 @@ public partial class Courses115 : System.Web.UI.Page
 
         try
         {
-            if (e.CommandName.Equals("View0"))
+            if (e.CommandName.Equals("View10"))
             {
 
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
@@ -1042,7 +1295,7 @@ public partial class Courses115 : System.Web.UI.Page
                     sqlCon1.Open();
 
                     SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers10.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
                         LBL_Course.Text = VcourseCMD.ToString();
@@ -1050,7 +1303,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Course.Text = "None";
 
                     SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers10.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
                         LBL_CourseTitle.Text = VcourseTitleCMD.ToString();
@@ -1058,7 +1311,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_CourseTitle.Text = "None";
 
                     SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers10.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
                         LBL_Units.Text = vunitsCMD.ToString();
@@ -1066,7 +1319,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Units.Text = "None";
 
                     SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers10.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
                         LBL_Soft.Text = vsoftCMD.ToString();
@@ -1074,7 +1327,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Soft.Text = "None";
 
                     SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers10.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
                         LBL_Co.Text = vcoCMD.ToString();
@@ -1083,7 +1336,7 @@ public partial class Courses115 : System.Web.UI.Page
 
 
                     SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers10.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
                         LBL_Hard.Text = vhardCMD.ToString();
@@ -1107,7 +1360,7 @@ public partial class Courses115 : System.Web.UI.Page
 
         try
         {
-            if (e.CommandName.Equals("View0"))
+            if (e.CommandName.Equals("View11"))
             {
 
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
@@ -1120,7 +1373,7 @@ public partial class Courses115 : System.Web.UI.Page
                     sqlCon1.Open();
 
                     SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers11.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
                         LBL_Course.Text = VcourseCMD.ToString();
@@ -1128,7 +1381,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Course.Text = "None";
 
                     SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers11.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
                         LBL_CourseTitle.Text = VcourseTitleCMD.ToString();
@@ -1136,7 +1389,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_CourseTitle.Text = "None";
 
                     SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers11.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
                         LBL_Units.Text = vunitsCMD.ToString();
@@ -1144,7 +1397,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Units.Text = "None";
 
                     SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers11.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
                         LBL_Soft.Text = vsoftCMD.ToString();
@@ -1152,7 +1405,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Soft.Text = "None";
 
                     SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers11.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
                         LBL_Co.Text = vcoCMD.ToString();
@@ -1161,7 +1414,7 @@ public partial class Courses115 : System.Web.UI.Page
 
 
                     SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers11.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
                         LBL_Hard.Text = vhardCMD.ToString();
@@ -1185,7 +1438,7 @@ public partial class Courses115 : System.Web.UI.Page
 
         try
         {
-            if (e.CommandName.Equals("View0"))
+            if (e.CommandName.Equals("View12"))
             {
 
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
@@ -1198,7 +1451,7 @@ public partial class Courses115 : System.Web.UI.Page
                     sqlCon1.Open();
 
                     SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers12.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
                         LBL_Course.Text = VcourseCMD.ToString();
@@ -1206,7 +1459,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Course.Text = "None";
 
                     SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers12.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
                         LBL_CourseTitle.Text = VcourseTitleCMD.ToString();
@@ -1214,7 +1467,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_CourseTitle.Text = "None";
 
                     SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers12.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
                         LBL_Units.Text = vunitsCMD.ToString();
@@ -1222,7 +1475,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Units.Text = "None";
 
                     SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers12.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
                         LBL_Soft.Text = vsoftCMD.ToString();
@@ -1230,7 +1483,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Soft.Text = "None";
 
                     SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers12.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
                         LBL_Co.Text = vcoCMD.ToString();
@@ -1239,7 +1492,7 @@ public partial class Courses115 : System.Web.UI.Page
 
 
                     SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers12.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
                         LBL_Hard.Text = vhardCMD.ToString();
@@ -1263,7 +1516,7 @@ public partial class Courses115 : System.Web.UI.Page
 
         try
         {
-            if (e.CommandName.Equals("View0"))
+            if (e.CommandName.Equals("View13"))
             {
 
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
@@ -1276,7 +1529,7 @@ public partial class Courses115 : System.Web.UI.Page
                     sqlCon1.Open();
 
                     SqlCommand courseCMD = new SqlCommand("SELECT Course FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers13.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseCMD = courseCMD.ExecuteScalar();
                     if (VcourseCMD != null)
                         LBL_Course.Text = VcourseCMD.ToString();
@@ -1284,7 +1537,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Course.Text = "None";
 
                     SqlCommand courseTitleCMD = new SqlCommand("SELECT CourseTitle FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    courseTitleCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers13.DataKeys[gvr.RowIndex].Value.ToString()));
                     object VcourseTitleCMD = courseTitleCMD.ExecuteScalar();
                     if (VcourseTitleCMD != null)
                         LBL_CourseTitle.Text = VcourseTitleCMD.ToString();
@@ -1292,7 +1545,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_CourseTitle.Text = "None";
 
                     SqlCommand unitsCMD = new SqlCommand("SELECT Units FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    unitsCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers13.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vunitsCMD = unitsCMD.ExecuteScalar();
                     if (vunitsCMD != null)
                         LBL_Units.Text = vunitsCMD.ToString();
@@ -1300,7 +1553,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Units.Text = "None";
 
                     SqlCommand softCMD = new SqlCommand("SELECT SoftReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    softCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers13.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vsoftCMD = softCMD.ExecuteScalar();
                     if (vsoftCMD != null)
                         LBL_Soft.Text = vsoftCMD.ToString();
@@ -1308,7 +1561,7 @@ public partial class Courses115 : System.Web.UI.Page
                         LBL_Soft.Text = "None";
 
                     SqlCommand coCMD = new SqlCommand("SELECT CoReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    coCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers13.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vcoCMD = coCMD.ExecuteScalar();
                     if (vcoCMD != null)
                         LBL_Co.Text = vcoCMD.ToString();
@@ -1317,7 +1570,7 @@ public partial class Courses115 : System.Web.UI.Page
 
 
                     SqlCommand hardCMD = new SqlCommand("SELECT HardReq FROM FlowchartTable115 WHERE id=@id", sqlCon1);
-                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[gvr.RowIndex].Value.ToString()));
+                    hardCMD.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers13.DataKeys[gvr.RowIndex].Value.ToString()));
                     object vhardCMD = hardCMD.ExecuteScalar();
                     if (vhardCMD != null)
                         LBL_Hard.Text = vhardCMD.ToString();
