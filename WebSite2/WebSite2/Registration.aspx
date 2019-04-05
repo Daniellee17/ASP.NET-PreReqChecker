@@ -23,9 +23,16 @@
             background-size: cover;
         }
 
+          h1 {
+            margin: 0;
+            padding: 0 0 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
         .registerBox {
-            width: 600px;
-            height: 690px;
+            width: 550px;
+            height: 630px;
            background: rgba(0, 0, 0, 0.8);
             color: #fff;
             top: 50%;
@@ -37,23 +44,16 @@
             font-family: sans-serif;
         }
 
-        .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+           .avatar {
+            width: 120px;
+            height: 120px;
             position: absolute;
-            top: -40px;
+            top: -70px;
             left: calc(50% - 50px);
         }
 
 
-        h1 {
-            margin: 0;
-            padding: 0 0 20px;
-            text-align: center;
-            font-size: 19px;
-        }
-
+   
 
         .registerBox p {
             margin: 0;
@@ -67,7 +67,7 @@
             border-bottom: 1px solid #fff;
             background: transparent;
             outline: none;
-            height: 40px;
+            height: 30px;
             color: #fff;
             font-size: 13px;
             position: center;
@@ -88,19 +88,21 @@
 
         .registerBox input[type="submit"] {
             border: none;
-            outline: none;
-            height: 40px;
-            background: #31BDC9;
-            color: #fff;
-            font-size: 18px;
-            border-radius: 20px;
-        }
-
-            .registerBox input[type="submit"]:hover {
-                cursor: pointer;
-                background: #39dc79;
-                color: #000;
+                outline: none;
+                height: 40px;
+                background: #110A28;
+                color: #fff;
+                font-size: 18px;
+                border-radius: 0;
+                width: 80px;
+                margin-top: 10px;
             }
+
+                .registerBox input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: #381357;
+                    color: #000;
+                }
 
         .registerBox a {
             text-decoration: none;
@@ -279,7 +281,7 @@ nav {
         <asp:HiddenField ID="hfUserID" runat="server" />
 
         <div class="registerBox">
-            <img src="images/login2.jpg" class="avatar" />
+            <img src="images/alien2.gif" class="avatar" />
             <h1>REGISTER</h1>
 
             <p>Full Name</p>

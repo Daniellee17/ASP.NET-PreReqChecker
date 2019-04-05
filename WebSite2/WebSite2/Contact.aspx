@@ -16,7 +16,7 @@
             font-family: bunge;
         }
 
-      body {
+        body {
             margin: 0;
             padding: 0;
             background: url(images/bg.jpg);
@@ -24,10 +24,17 @@
         }
 
 
+        h1 {
+            margin: 0;
+            padding: 0 0 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
         .contactBox {
             width: 510px;
             height: 360px;
-           background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
             top: 50%;
             left: 50%;
@@ -39,63 +46,53 @@
         }
 
         .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 120px;
+            height: 120px;
             position: absolute;
-            top: -40px;
+            top: -70px;
             left: calc(50% - 50px);
         }
 
 
-        h1 {
-            margin: 0;
-            padding: 0 0 20px;
-            text-align: center;
-            font-size: 19px;
-        }
 
         .contactBox p {
             margin: 0;
             padding: 0;
-            font-size: 13px;
-             color: #31BDC9;
+            font-size: 12px;
+            color: #31BDC9;
         }
 
-        .contactBox input {
-            width: 100%;
-            margin-bottom: 20px;
+
+        .contactBox input[type="text"], input[type="password"] {
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            color: #fff;
+            font-size: 10px;
         }
 
-            .contactBox input[type="text"], input[type="password"] {
-                border: none;
-                border-bottom: 1px solid #fff;
-                background: transparent;
-                outline: none;
-                height: 40px;
-                color: #fff;
-                font-size: 13px;
-            }
+        .contactBox input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #110A28;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 0;
+            width: 80px;
+            margin-top: 20px;
+        }
 
-            .contactBox input[type="submit"] {
-                border: none;
-                outline: none;
-                height: 40px;
-                background: #31BDC9;
-                color: #fff;
-                font-size: 18px;
-                border-radius: 20px;
+            .contactBox input[type="submit"]:hover {
+                cursor: pointer;
+                background: #381357;
+                color: #000;
             }
-
-                .contactBox input[type="submit"]:hover {
-                    cursor: pointer;
-                    background: #39dc79;
-                    color: #000;
-                }
 
         .contactBox a {
             text-decoration: none;
-            font-size: 12px;
+            font-size: 10px;
             color: #fff;
         }
 
@@ -104,9 +101,9 @@
             }
 
 
-        
+
         .generalLabel {
-              top: 71%;
+            top: 71%;
             left: 50%;
             position: absolute;
             transform: translate(-50%,-50%);
@@ -124,7 +121,7 @@
 
 
 
-    nav {
+        nav {
             top: 0;
             left: 0;
             width: 100%;
@@ -196,7 +193,7 @@
                     <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
                 </a></li>
 
-                
+
 
 
                 <li><a>
@@ -207,38 +204,32 @@
 
 
 
-         <div class="contactBox">
-             <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" />
-            <img src="images/phone.png" class="avatar" />
+        <div class="contactBox">
+
+            <img src="images/alien3.gif" class="avatar" />
             <h1>CONTACT US</h1>
 
-            
+
             <p>Company</p>
-            <asp:Label ID="LBL_Name" runat="server" Text="A.G.E" Font-Size="16px"></asp:Label><br />
+            <asp:Label ID="LBL_Name" runat="server" Text="A.G.E"></asp:Label><br />
             <br />
 
             <p>Address</p>
-            <asp:Label ID="LBL_Address" runat="server" Text="East Tower, One Archers Place, Taft Avenue, Malate Manile" Font-Size="16px"></asp:Label><br />
+            <asp:Label ID="LBL_Address" runat="server" Text="East Tower, One Archers Place, Taft Avenue, Malate Manile"></asp:Label><br />
             <br />
 
             <p>Contact Number</p>
-            <asp:Label ID="LBL_Contact" runat="server" Text="+639985333809" Font-Size="16px"></asp:Label><br />
+            <asp:Label ID="LBL_Contact" runat="server" Text="+639985333809"></asp:Label><br />
             <br />
 
             <p>Email</p>
-            <asp:Label ID="LBL_Email" runat="server" Text="danielleespiritu17@gmail.com" Font-Size="16px"></asp:Label><br />
-            <br />
+            <asp:Label ID="LBL_Email" runat="server" Text="danielleespiritu17@gmail.com"></asp:Label><br />
 
-
-
-
-
-
-
+            <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" />
 
 
         </div>
-       
+
         <div class="generalLabel">
 
             <asp:Label ID="LBLerror" runat="server" Text=""></asp:Label>
