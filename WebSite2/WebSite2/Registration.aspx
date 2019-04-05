@@ -16,14 +16,14 @@
             font-family: bunge;
         }
 
-    body {
+        body {
             margin: 0;
             padding: 0;
             background: url(images/bg.jpg);
             background-size: cover;
         }
 
-          h1 {
+        h1 {
             margin: 0;
             padding: 0 0 10px;
             text-align: center;
@@ -33,7 +33,7 @@
         .registerBox {
             width: 550px;
             height: 630px;
-           background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
             top: 50%;
             left: 50%;
@@ -44,7 +44,7 @@
             font-family: sans-serif;
         }
 
-           .avatar {
+        .avatar {
             width: 120px;
             height: 120px;
             position: absolute;
@@ -53,7 +53,7 @@
         }
 
 
-   
+
 
         .registerBox p {
             margin: 0;
@@ -88,21 +88,21 @@
 
         .registerBox input[type="submit"] {
             border: none;
-                outline: none;
-                height: 40px;
-                background: #110A28;
-                color: #fff;
-                font-size: 18px;
-                border-radius: 0;
-                width: 80px;
-                margin-top: 10px;
-            }
+            outline: none;
+            height: 40px;
+            background: #110A28;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 0;
+            width: 80px;
+            margin-top: 10px;
+        }
 
-                .registerBox input[type="submit"]:hover {
-                    cursor: pointer;
-                    background: #381357;
-                    color: #000;
-                }
+            .registerBox input[type="submit"]:hover {
+                cursor: pointer;
+                background: #381357;
+                color: #000;
+            }
 
         .registerBox a {
             text-decoration: none;
@@ -163,7 +163,7 @@
             color: aliceblue;
         }
 
-nav {
+        nav {
             top: 0;
             left: 0;
             width: 100%;
@@ -235,7 +235,7 @@ nav {
                     <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER" Style="color: #31BDC9"> </asp:LinkButton>
                 </a></li>
 
-               
+
 
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
