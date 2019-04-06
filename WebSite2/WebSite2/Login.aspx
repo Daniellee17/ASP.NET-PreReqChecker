@@ -15,6 +15,10 @@
             src: url(fonts/BungeeInline-Regular.ttf);
             font-family: bunge;
         }
+                @font-face {
+            src: url(fonts/OpenSansCondensed-Light.ttf);
+            font-family: banger;
+        }
 
 
         body {
@@ -76,18 +80,22 @@
             }
 
             .loginBox input[type="submit"] {
-                border: none;
-                outline: none;
+                  border: 1px solid WHITE;
                 height: 40px;
-                background: #110A28;
+               background: rgba(0,0,0,0);
                 color: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 border-radius: 20px;
+    
             }
+
+
+
 
                 .loginBox input[type="submit"]:hover {
                     cursor: pointer;
-                    background: #381357;
+                         border: 1px solid WHITE;
+                    background: WHITE;
                     color: #000;
                 }
 

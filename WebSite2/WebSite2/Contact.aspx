@@ -73,20 +73,21 @@
         }
 
         .contactBox input[type="submit"] {
-            border: none;
+            border: 1px solid WHITE;
+               background: rgba(0,0,0,0);
             outline: none;
             height: 40px;
-            background: #110A28;
+           
             color: #fff;
             font-size: 18px;
-            border-radius: 0;
+            border-radius: 20px;
             width: 80px;
             margin-top: 20px;
         }
 
             .contactBox input[type="submit"]:hover {
                 cursor: pointer;
-                background: #381357;
+                background: WHITE;
                 color: #000;
             }
 

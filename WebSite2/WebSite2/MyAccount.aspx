@@ -86,10 +86,11 @@
         }
 
         .login-box input[type="submit"] {
-            border: none;
+               border: 1px solid WHITE;
+              background: rgba(0,0,0,0);
             outline: none;
             height: 40px;
-            background: #31BDC9;
+           
             color: #fff;
             font-size: 16px;
             border-radius: 16px;
@@ -97,7 +98,7 @@
 
             .login-box input[type="submit"]:hover {
                 cursor: pointer;
-                background: #39dc79;
+                background: WHITE;
                 color: #000;
             }
 
@@ -271,8 +272,8 @@
             </script>
 
             <asp:Button ID="BTNchange" runat="server" Text="Change Password" OnClick="BTNchange_Click" />
-            <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click" Style="background-color: red" Font-Bold="false" ForeColor="WHITE" Visible="false" />
-            <asp:Button ID="BTNGrid" runat="server" Text="MasterDB" Style="background-color: red" Font-Bold="false" ForeColor="WHITE" OnClick="BTNGrid_Click" Visible="false" />
+            <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click"  Font-Bold="false" ForeColor="WHITE" Visible="false" />
+            <asp:Button ID="BTNGrid" runat="server" Text="MasterDB"  Font-Bold="false" ForeColor="WHITE" OnClick="BTNGrid_Click" Visible="false" />
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
 

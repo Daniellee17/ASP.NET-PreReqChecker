@@ -31,15 +31,16 @@
         }
 
 
-        .buttons input[type="submit"] {
+       .buttons input[type="submit"] {
+            border: 1px solid WHITE;
+               background: rgba(0,0,0,0);
             top: 66%;
             position: absolute;
             left: 50%;
-            border: none;
-            outline: none;
-            background: #110A28;
+                 
+          
             color: #fff;
-            font-size: 30px;
+            font-size: 27px;
             display: inherit inline;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -48,12 +49,14 @@
             margin-right: auto;
             text-align: center;
             font-family: banger;
-            color: white;
+            
+          
         }
 
             .buttons input[type="submit"]:hover {
+                border: 1px solid WHITE;
                 cursor: pointer;
-                background: #381357;
+                 background: white;
                 color: #000;
             }
 
@@ -124,11 +127,11 @@
             nav .brand h2 {
                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: #990000;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
+                font-family: mech;
                 font-size: 22px;
             }
 
@@ -169,12 +172,12 @@
         <nav>
             <div class="brand">
                 <h2>
-                    <asp:Label ID="LblName" runat="server" Text=" " ForeColor="White" Font-Bold="false"></asp:Label>
+                    <asp:Label ID="LblName" runat="server" Text=" " Font-Bold="false"></asp:Label>
                 </h2>
             </div>
             <ul>
                 <li><a>
-                    <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click" Style="color: #31BDC9">HOME</asp:LinkButton>
+                    <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click" Style="color: #990000">HOME</asp:LinkButton>
                 </a></li>
                 <div class="myClass" id="myID" runat="server">
 
@@ -227,13 +230,13 @@
 
         <div class="buttons">
 
-            <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" />
+            <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click"/>
             <br />
             <br />
-            <asp:Button ID="BTN_115" runat="server" Text="ID 115 and Below" OnClick="BTN_115_Click" Style="top: 74%" />
+            <asp:Button ID="BTN_115" runat="server" Text="ID 115 and Below" OnClick="BTN_115_Click" Style="top: 74.5%" />
             <br />
             <br />
-            <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 82%; width: 220px" />
+            <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 83%; width: 205px" />
 
 
         </div>

@@ -45,11 +45,11 @@
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 300px;
+            height: 320px;
             position: absolute;
-            top: -70px;
-            left: calc(50% - 50px);
+            top: -150px;
+            left: calc(35% - 50px);
         }
 
 
@@ -87,20 +87,21 @@
         }
 
         .registerBox input[type="submit"] {
-            border: none;
+         
             outline: none;
             height: 40px;
-            background: #110A28;
+              border: 1px solid WHITE;
+              background: rgba(0,0,0,0);
             color: #fff;
             font-size: 18px;
-            border-radius: 0;
+            border-radius: 20px;
             width: 80px;
             margin-top: 10px;
         }
 
             .registerBox input[type="submit"]:hover {
                 cursor: pointer;
-                background: #381357;
+                background: WHITE;
                 color: #000;
             }
 
@@ -276,7 +277,7 @@
         <asp:HiddenField ID="hfUserID" runat="server" />
 
         <div class="registerBox">
-            <img src="images/alien2.gif" class="avatar" />
+           
             <h1>REGISTER</h1>
 
             <p>Full Name</p>

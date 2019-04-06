@@ -25,13 +25,13 @@
         .buttonDane input[type="submit"] {
             margin: 0;
             padding: 0;
-            border: none;
-            outline: none;
+               border: 1px solid WHITE;
+               background: rgba(0,0,0,0);
             height: 33px;
             width: 68px;
             left: 0%;
             position: absolute;
-           background: rgba(0, 0, 0, 0.8);
+         
             color: #fff;
             font-size: 14px;
             margin-left: 5px;

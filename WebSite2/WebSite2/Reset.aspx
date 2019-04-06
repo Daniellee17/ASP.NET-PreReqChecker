@@ -15,13 +15,13 @@
         .buttonDane input[type="submit"] {
             margin: 0;
             padding: 0;
-            border: none;
-            outline: none;
+       
             height: 33px;
             width: 68px;
             left: 0%;
             position: absolute;
-            background: rgba(0,0,0,0.3);
+             border: 1px solid WHITE;
+              background: rgba(0,0,0,0);
             color: #fff;
             font-size: 14px;
             margin-left: 5px;
@@ -89,18 +89,19 @@
         }
 
         .resetBox input[type="submit"] {
-            border: none;
+         
             outline: none;
             height: 40px;
-            background: #31BDC9;
+               border: 1px solid WHITE;
+              background: rgba(0,0,0,0);
             color: #fff;
-            font-size: 18px;
+            font-size: 16px;
             border-radius: 14px;
         }
 
             .resetBox input[type="submit"]:hover {
                 cursor: pointer;
-                background: #39dc79;
+                background: WHITE;
                 color: #000;
             }
 
@@ -205,10 +206,10 @@
 
 
             <br />
-
+             <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" />
 
             <asp:Button ID="BTNenter" runat="server" Text="Submit" OnClick="BTNenter_Click" />
-            <asp:Button ID="BTN_Back" runat="server" Text="BACK" OnClick="BTN_Back_Click" />
+           
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
 
