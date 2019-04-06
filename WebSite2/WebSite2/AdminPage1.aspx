@@ -6,13 +6,16 @@
     <title></title>
     <style type="text/css">
         @font-face {
+            src: url(fonts/OpenSansCondensed-Light.ttf);
+            font-family: banger;
+        }
+        @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
-
         @font-face {
-            src: url(fonts/BungeeInline-Regular.ttf);
-            font-family: bunge;
+            src: url(fonts/KaushanScript-Regular.ttf);
+            font-family: mech;
         }
 
     body {
@@ -51,7 +54,8 @@
         .approvedBox {
             width: 450px;
             height: 590px;
-            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             top: 50%;
             left: 18%;
@@ -121,7 +125,8 @@
         .pendingBox {
             width: 450px;
             height: 590px;
-            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             top: 50%;
             left: 46%;
@@ -182,7 +187,8 @@
         .viewBox {
             width: 610px;
             height: 590px;
-            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             top: 50%;
             left: 78%;
@@ -265,12 +271,12 @@ nav {
             nav .brand h2 {
                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {

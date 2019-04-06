@@ -6,16 +6,18 @@
     <title></title>
 
     <style type="text/css">
+   @font-face {
+            src: url(fonts/OpenSansCondensed-Light.ttf);
+            font-family: banger;
+        }
         @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
-
         @font-face {
-            src: url(fonts/BungeeInline-Regular.ttf);
-            font-family: bunge;
+            src: url(fonts/KaushanScript-Regular.ttf);
+            font-family: mech;
         }
-
         body {
             margin: 0;
             padding: 0;
@@ -33,7 +35,8 @@
         .registerBox {
             width: 550px;
             height: 630px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
+               box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 50%;
             left: 50%;
@@ -175,14 +178,14 @@
         }
 
             nav .brand h2 {
-                padding: 0;
+                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {
@@ -230,7 +233,7 @@
                     <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click">HOME</asp:LinkButton>
                 </a></li>
                 <li><a>
-                    <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER" Style="color: #31BDC9"> </asp:LinkButton>
+                    <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER" Style="color: #75E86B"> </asp:LinkButton>
                 </a></li>
 
                 <li><a>

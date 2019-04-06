@@ -6,14 +6,17 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+      @font-face {
+            src: url(fonts/OpenSansCondensed-Light.ttf);
+            font-family: banger;
+        }
         @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
-
         @font-face {
-            src: url(fonts/BungeeInline-Regular.ttf);
-            font-family: bunge;
+            src: url(fonts/KaushanScript-Regular.ttf);
+            font-family: mech;
         }
 
         body {
@@ -34,7 +37,7 @@
         .contactBox {
             width: 510px;
             height: 360px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             top: 50%;
             left: 50%;
@@ -43,6 +46,7 @@
             box-sizing: border-box;
             padding: 70px 30px;
             font-family: sans-serif;
+               box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
         }
 
         .avatar {
@@ -133,14 +137,14 @@
         }
 
             nav .brand h2 {
-                padding: 0;
+                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {
@@ -212,8 +216,6 @@
 
 
         <div class="contactBox">
-
-            <img src="images/alien3.gif" class="avatar" />
             <h1>CONTACT US</h1>
 
 

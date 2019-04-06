@@ -35,17 +35,17 @@
 
         .subLabel {
             top: 15%;
-            left: 50%;
+            left: 85%;
             width: 100%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
            
-            font-family: mech;
+            font-family: banger;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            font-size: 60px;
+            font-size: 40px;
             color: white;
         }
 
@@ -509,12 +509,12 @@
             nav .brand h2 {
                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {
@@ -587,7 +587,7 @@
 
         <div class="subLabel">
 
-            <asp:Label ID="Label4" runat="server" Text="2015 Curriculum Checklist"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="2015 CURRICULUM CHECKLIST"></asp:Label>
 
 
         </div>

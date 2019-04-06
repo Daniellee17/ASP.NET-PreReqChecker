@@ -509,12 +509,12 @@
             nav .brand h2 {
                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {

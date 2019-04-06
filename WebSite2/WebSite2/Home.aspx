@@ -16,8 +16,6 @@
             font-family: marc;
         }
 
-
-
         @font-face {
             src: url(fonts/KaushanScript-Regular.ttf);
             font-family: mech;
@@ -30,15 +28,13 @@
             background-size: cover;
         }
 
-
-       .buttons input[type="submit"] {
+        .buttons input[type="submit"] {
             border: 1px solid WHITE;
-               background: rgba(0,0,0,0);
+            background: rgba(0,0,0,0);
             top: 66%;
             position: absolute;
             left: 50%;
-                 
-          
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             font-size: 27px;
             display: inherit inline;
@@ -49,21 +45,17 @@
             margin-right: auto;
             text-align: center;
             font-family: banger;
-            
-          
         }
 
             .buttons input[type="submit"]:hover {
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
                 border: 1px solid WHITE;
                 cursor: pointer;
-                 background: white;
+                background: white;
                 color: #000;
             }
 
         }
-
-
-
 
         .generalLabel {
             top: 71%;
@@ -79,7 +71,6 @@
             font-size: 18px;
             color: red;
         }
-
 
         .mainLabel {
             top: 44%;
@@ -127,12 +118,12 @@
             nav .brand h2 {
                 padding: 0;
                 margin: 18px, 0;
-                color: #990000;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: mech;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {
@@ -177,12 +168,12 @@
             </div>
             <ul>
                 <li><a>
-                    <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click" Style="color: #990000">HOME</asp:LinkButton>
+                    <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click" Style="color: #75E86B">HOME</asp:LinkButton>
                 </a></li>
                 <div class="myClass" id="myID" runat="server">
 
                     <li><a>
-                           <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
+                        <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
                     </a></li>
                 </div>
 
@@ -229,15 +220,13 @@
         </div>
 
         <div class="buttons">
-
-            <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click"/>
+            <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" Style="top: 67%; left: 51%;" />
             <br />
             <br />
-            <asp:Button ID="BTN_115" runat="server" Text="ID 115 and Below" OnClick="BTN_115_Click" Style="top: 74.5%" />
+            <asp:Button ID="BTN_115" runat="server" Text="ID 115 and Below" OnClick="BTN_115_Click" Style="top: 67%; left: 40%;" />
             <br />
             <br />
-            <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 83%; width: 205px" />
-
+            <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 67%; width: 205px; left: 62%;" />
 
         </div>
 

@@ -6,18 +6,17 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+   @font-face {
+            src: url(fonts/OpenSansCondensed-Light.ttf);
+            font-family: banger;
+        }
         @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
-
         @font-face {
-            src: url(fonts/BungeeInline-Regular.ttf);
-            font-family: bunge;
-        }
-                @font-face {
-            src: url(fonts/OpenSansCondensed-Light.ttf);
-            font-family: banger;
+            src: url(fonts/KaushanScript-Regular.ttf);
+            font-family: mech;
         }
 
 
@@ -31,7 +30,7 @@
         .loginBox {
             width: 320px;
             height: 410px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             top: 50%;
             left: 50%;
@@ -39,16 +38,11 @@
             transform: translate(-50%,-50%);
             box-sizing: border-box;
             padding: 70px 30px;
+
+             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             font-family: sans-serif;
         }
 
-        .avatar {
-            width: 120px;
-            height: 120px;
-            position: absolute;
-            top: -52px;
-            left: calc(50% - 50px);
-        }
 
 
         h1 {
@@ -80,6 +74,7 @@
             }
 
             .loginBox input[type="submit"] {
+                 box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
                   border: 1px solid WHITE;
                 height: 40px;
                background: rgba(0,0,0,0);
@@ -93,6 +88,7 @@
 
 
                 .loginBox input[type="submit"]:hover {
+                     box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
                     cursor: pointer;
                          border: 1px solid WHITE;
                     background: WHITE;
@@ -106,6 +102,7 @@
         }
 
             .loginBox a:hover {
+
                 color: #39dc79;
             }
 
@@ -145,12 +142,12 @@
             nav .brand h2 {
                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {
@@ -208,7 +205,7 @@
     
 
                 <li><a>
-                    <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login" Style="color: #31BDC9"></asp:LinkButton>
+                    <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login" Style="color: #75E86B"></asp:LinkButton>
                 </a></li>
             </ul>
         </nav>
@@ -219,7 +216,7 @@
         </div>
 
         <div class="loginBox">
-            <img src="images/alien.gif" class="avatar" />
+       
             <h1>LOGIN</h1>
 
             <p>Username</p>

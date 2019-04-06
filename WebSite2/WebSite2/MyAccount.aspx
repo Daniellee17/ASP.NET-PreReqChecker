@@ -7,16 +7,21 @@
 
     <style type="text/css">
         @font-face {
+            src: url(fonts/OpenSansCondensed-Light.ttf);
+            font-family: banger;
+        }
+
+        @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
 
         @font-face {
-            src: url(fonts/BungeeInline-Regular.ttf);
-            font-family: bunge;
+            src: url(fonts/KaushanScript-Regular.ttf);
+            font-family: mech;
         }
 
-     body {
+        body {
             margin: 0;
             padding: 0;
             background: url(images/bg.jpg);
@@ -26,7 +31,8 @@
         .login-box {
             width: 540px;
             height: 550px;
-            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             top: 50%;
             left: 50%;
@@ -86,11 +92,10 @@
         }
 
         .login-box input[type="submit"] {
-               border: 1px solid WHITE;
-              background: rgba(0,0,0,0);
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0);
             outline: none;
             height: 40px;
-           
             color: #fff;
             font-size: 16px;
             border-radius: 16px;
@@ -129,8 +134,8 @@
             color: red;
         }
 
-     
-      nav {
+
+        nav {
             top: 0;
             left: 0;
             width: 100%;
@@ -143,12 +148,12 @@
             nav .brand h2 {
                 padding: 0;
                 margin: 18px, 0;
-                color: #fff;
+                color: WHITE;
                 float: left;
                 height: 100%;
                 line-height: 65px;
-                font-family: marc;
-                font-size: 22px;
+                font-family: banger;
+                font-size: 20px;
             }
 
             nav ul {
@@ -196,8 +201,8 @@
                     <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click">HOME</asp:LinkButton>
                 </a></li>
                 <li><a>
-                    <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click" Style="color: #31BDC9">MY ACCOUNT</asp:LinkButton>
-                </a></li>       
+                    <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click" Style="color: #75E86B">MY ACCOUNT</asp:LinkButton>
+                </a></li>
 
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
@@ -259,7 +264,7 @@
 
             <br />
             <br />
-           
+
 
             <asp:Button ID="BTNreset" runat="server" Text="Reset Password" OnClientClick=" JSalert();" OnClick="BTNreset_Click" />
 
@@ -272,8 +277,8 @@
             </script>
 
             <asp:Button ID="BTNchange" runat="server" Text="Change Password" OnClick="BTNchange_Click" />
-            <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click"  Font-Bold="false" ForeColor="WHITE" Visible="false" />
-            <asp:Button ID="BTNGrid" runat="server" Text="MasterDB"  Font-Bold="false" ForeColor="WHITE" OnClick="BTNGrid_Click" Visible="false" />
+            <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click" Font-Bold="false" ForeColor="WHITE" Visible="false" />
+            <asp:Button ID="BTNGrid" runat="server" Text="MasterDB" Font-Bold="false" ForeColor="WHITE" OnClick="BTNGrid_Click" Visible="false" />
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
 
