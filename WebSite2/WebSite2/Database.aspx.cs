@@ -23,7 +23,7 @@ public partial class Database : System.Web.UI.Page
         if (Session["Username"] != null)
         {
             loggedin = 1;
-            LB_reg.Text = "Experiments";
+         
             if (Session["Type"] == "Administrator")
             {
                 admin = 1;
@@ -41,6 +41,7 @@ public partial class Database : System.Web.UI.Page
 
         else
         {
+      
             LblName.Text = "Welcome, Guest!";
             LB_login.Text = "Login";
         }
@@ -220,13 +221,6 @@ public partial class Database : System.Web.UI.Page
 
 
 
-    protected void LB_contact_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Contact.aspx");
-    }
-
-
-
 
     protected void LB_login_Click(object sender, EventArgs e)
     {
@@ -235,18 +229,6 @@ public partial class Database : System.Web.UI.Page
         Response.Redirect("Login.aspx");
     }
 
-    protected void LB_reg_Click(object sender, EventArgs e)
-    {
-        if (loggedin == 1)
-        {
-            Response.Redirect("Experiments.aspx");
-        }
-
-        else
-        {
-            Response.Redirect("Registration.aspx");
-        }
-    }
 
     protected void LB_home_Click(object sender, EventArgs e)
     {

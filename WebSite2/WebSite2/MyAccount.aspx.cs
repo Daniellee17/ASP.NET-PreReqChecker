@@ -22,7 +22,6 @@ public partial class MyAccount : System.Web.UI.Page
         if (Session["Username"] != null)
         {
             loggedin = 1;
-            LB_reg.Text = "Experiments";
             Tb1.Text = Session["Username"].ToString();
 
             if (Session["Type"] == "Administrator")
@@ -36,12 +35,12 @@ public partial class MyAccount : System.Web.UI.Page
             {
                 admin = 0;
                 LblName.Text = "Welcome, " + Session["FirstName"] + "!";
-               
+
 
             }
             LB_login.Text = "Logout";
 
-      
+
 
         }
 
@@ -49,7 +48,7 @@ public partial class MyAccount : System.Web.UI.Page
         {
             LblName.Text = "Welcome, Guest!";
             LB_login.Text = "Login";
-       
+
         }
 
         if (!IsPostBack)
@@ -64,8 +63,8 @@ public partial class MyAccount : System.Web.UI.Page
         {
             sqlCon1.Open();
 
-           
-        
+
+
 
 
             ////////// FIRST NAME AND LAST NAME ////////////////
@@ -78,7 +77,7 @@ public partial class MyAccount : System.Web.UI.Page
             object valuea2 = a2.ExecuteScalar();
 
             if (valuea != null)
-             LBL_FullName.Text = valuea.ToString() + " " + valuea2.ToString();
+                LBL_FullName.Text = valuea.ToString() + " " + valuea2.ToString();
 
 
             ////////// CONTACT ////////////////
@@ -86,7 +85,7 @@ public partial class MyAccount : System.Web.UI.Page
             b.Parameters.AddWithValue("@Username", Tb1.Text.Trim());
             object valueb = b.ExecuteScalar();
             if (valueb != null)
-                LBL_Contact.Text =valueb.ToString();
+                LBL_Contact.Text = valueb.ToString();
 
             ////////// USERNAME ////////////////
             if (Tb1.Text != "")
@@ -105,10 +104,10 @@ public partial class MyAccount : System.Web.UI.Page
             bbb.Parameters.AddWithValue("@Username", Tb1.Text.Trim());
             object valuebbb = bbb.ExecuteScalar();
             if (valuebbb != null)
-            LBL_Password.Text = valuebbb.ToString();
+                LBL_Password.Text = valuebbb.ToString();
 
-           ////////// TYPE ////////////////
-           SqlCommand c = new SqlCommand("SELECT Type FROM FinalTable WHERE Username=@Username", sqlCon1);
+            ////////// TYPE ////////////////
+            SqlCommand c = new SqlCommand("SELECT Type FROM FinalTable WHERE Username=@Username", sqlCon1);
             c.Parameters.AddWithValue("@Username", Tb1.Text.Trim());
             object value = c.ExecuteScalar();
             if (value != null)
@@ -123,7 +122,7 @@ public partial class MyAccount : System.Web.UI.Page
 
 
     }
- 
+
 
 
     protected void LB_my_Click(object sender, EventArgs e)
@@ -137,19 +136,6 @@ public partial class MyAccount : System.Web.UI.Page
 
         Session.RemoveAll();
         Response.Redirect("Login.aspx");
-    }
-
-    protected void LB_reg_Click(object sender, EventArgs e)
-    {
-        if (loggedin == 1)
-        {
-            Response.Redirect("Experiments.aspx");
-        }
-
-        else
-        {
-            Response.Redirect("Registration.aspx");
-        }
     }
 
     protected void LB_contact_Click(object sender, EventArgs e)
@@ -198,7 +184,7 @@ public partial class MyAccount : System.Web.UI.Page
 
 
 
-  
+
 
     protected void BTNreset_Click(object sender, EventArgs e)
     {
@@ -222,9 +208,9 @@ public partial class MyAccount : System.Web.UI.Page
                 sqlCmd0.ExecuteNonQuery();
 
                 Response.Redirect(Request.RawUrl);
-             
+
             }
-            
+
         }
 
 

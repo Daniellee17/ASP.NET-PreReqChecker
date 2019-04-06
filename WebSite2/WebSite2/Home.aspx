@@ -37,12 +37,9 @@
             left: 50%;
             border: none;
             outline: none;
-           
-            
             background: #110A28;
             color: #fff;
             font-size: 30px;
-            
             display: inherit inline;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
@@ -51,7 +48,6 @@
             margin-right: auto;
             text-align: center;
             font-family: banger;
-           
             color: white;
         }
 
@@ -63,7 +59,7 @@
 
         }
 
-       
+
 
 
         .generalLabel {
@@ -180,12 +176,21 @@
                 <li><a>
                     <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click" Style="color: #31BDC9">HOME</asp:LinkButton>
                 </a></li>
-                <li><a>
-                    <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
-                </a></li>
-                <li><a>
-                    <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
-                </a></li>
+                <div class="myClass" id="myID" runat="server">
+
+                    <li><a>
+                           <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
+                    </a></li>
+                </div>
+
+
+                <div class="regClass" id="regID" runat="server">
+                    <li><a>
+                        <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
+                    </a></li>
+                </div>
+
+
 
 
 
@@ -226,7 +231,7 @@
             <br />
             <br />
             <asp:Button ID="BTN_115" runat="server" Text="ID 115 and Below" OnClick="BTN_115_Click" Style="top: 74%" />
-                <br />
+            <br />
             <br />
             <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 82%; width: 220px" />
 

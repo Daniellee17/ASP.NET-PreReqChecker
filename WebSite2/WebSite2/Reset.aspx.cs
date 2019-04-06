@@ -31,6 +31,7 @@ public partial class Reset : System.Web.UI.Page
 
         if (Session["Username"] != null)
         {
+            
 
             sessionname = Session["Username"].ToString();
             Tb1.Text = sessionname;

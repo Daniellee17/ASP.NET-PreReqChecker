@@ -15,7 +15,7 @@ public partial class Registration : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-
+        
 
         this.UnobtrusiveValidationMode =
             System.Web.UI.UnobtrusiveValidationMode.None;
@@ -37,10 +37,13 @@ public partial class Registration : System.Web.UI.Page
             }
             LB_login.Text = "Logout";
 
+          
+
         }
 
         else
         {
+        
             guest = 1;
             LblName.Text = "Welcome, Guest!";
             LB_login.Text = "Login";
@@ -80,6 +83,7 @@ public partial class Registration : System.Web.UI.Page
         else if (CheckBox1.Checked == false)
         {
             LBL.Text = "You need to agree to our terms of service";
+          
 
 
         }

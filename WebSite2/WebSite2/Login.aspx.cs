@@ -26,7 +26,8 @@ public partial class Login : System.Web.UI.Page
         if (Session["Username"] != null)
         {
             loggedin = 1;
-            LB_reg.Text = "Experiments";
+           
+           
             if (Session["Type"] == "Administrator")
             {
                 admin = 1;

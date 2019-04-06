@@ -20,13 +20,13 @@ public partial class Contact : System.Web.UI.Page
         if (Session["Username"] != null)
         {
             loggedin = 1;
-            LB_reg.Text = "Experiments";
+            regID.Visible = false;
+
             if (Session["Type"] == "Administrator")
             {
                 admin = 1;
                 LblName.Text = "Welcome, " + " Admin " + Session["FirstName"] + "!";
             }
-
             else
             {
                 admin = 0;
@@ -39,6 +39,7 @@ public partial class Contact : System.Web.UI.Page
 
         else
         {
+            myID.Visible = false;
             guest = 1;
             LblName.Text = "Welcome, Guest!";
             LB_login.Text = "Login";

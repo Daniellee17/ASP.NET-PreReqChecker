@@ -196,12 +196,7 @@
                 </a></li>
                 <li><a>
                     <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click" Style="color: #31BDC9">MY ACCOUNT</asp:LinkButton>
-                </a></li>
-                <li><a>
-                    <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
-                </a></li>
-
-             
+                </a></li>       
 
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>

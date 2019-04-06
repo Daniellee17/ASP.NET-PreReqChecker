@@ -22,27 +22,26 @@ public partial class Courses : System.Web.UI.Page
         if (Session["Username"] != null)
         {
             loggedin = 1;
-
-            LB_reg.Text = "Experiments";
+            regID.Visible = false;
 
             if (Session["Type"] == "Administrator")
             {
-
                 admin = 1;
                 LblName.Text = "Welcome, " + " Admin " + Session["FirstName"] + "!";
             }
             else
             {
-
+                admin = 0;
                 LblName.Text = "Welcome, " + Session["FirstName"] + "!";
 
             }
-
             LB_login.Text = "Logout";
+
         }
 
         else
         {
+            myID.Visible = false;
             LblName.Text = "Welcome, Guest!";
             LB_login.Text = "Login";
 
