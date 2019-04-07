@@ -223,7 +223,7 @@
             <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" Style="top: 67%; left: 51%;" />
             <br />
             <br />
-            <asp:Button ID="BTN_115" runat="server" Text="ID 115 and Below" OnClick="BTN_115_Click" Style="top: 67%; left: 40%;" />
+            <asp:Button ID="BTN_115" runat="server" Text="ID 117 and Below" OnClick="BTN_115_Click" Style="top: 67%; left: 40%;" />
             <br />
             <br />
             <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 67%; width: 205px; left: 62%;" />
