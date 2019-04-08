@@ -1,7 +1,7 @@
 USE [ageDB]
 GO
 
-/****** Object:  Table [dbo].[FinalTable]    Script Date: 31/03/2019 9:32:15 PM ******/
+/****** Object:  Table [dbo].[FinalTable]    Script Date: 08/04/2019 4:55:25 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -13,12 +13,13 @@ GO
 
 CREATE TABLE [dbo].[FinalTable](
 	[UserID] [int] IDENTITY(1,1) NOT NULL,
+	[IDNumber] [varchar](50) NULL,
 	[FirstName] [varchar](50) NULL,
 	[LastName] [varchar](50) NULL,
 	[Contact] [varchar](50) NULL,
 	[Username] [varchar](20) NULL,
 	[Email] [varchar](50) NULL,
-	[Password] [varchar](20) COLLATE SQL_Latin1_General_CP1_CS_AS NULL,
+	[Password] [varchar](20) NULL,
 	[Type] [varchar](50) NULL,
 	[Verified] [varchar](50) NULL,
  CONSTRAINT [PK_FinalTable] PRIMARY KEY CLUSTERED 

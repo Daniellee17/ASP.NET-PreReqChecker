@@ -114,9 +114,10 @@ public partial class Database : System.Web.UI.Page
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    string query = "INSERT INTO FinalTable (FirstName,LastName,Username,Contact,Email,Password,Type,Verified) VALUES (@FirstName,@LastName,@Username,@Contact,@Email,@Password,@Type,@Verified)";
+                    string query = "INSERT INTO FinalTable (IDNumber,FirstName,LastName,Username,Contact,Email,Password,Type,Verified) VALUES (@IDNumber,@FirstName,@LastName,@Username,@Contact,@Email,@Password,@Type,@Verified)";
                     SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
+                    sqlCmd.Parameters.AddWithValue("@IDNumber", (gvUsers.FooterRow.FindControl("txtIDFooter") as TextBox).Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@FirstName", (gvUsers.FooterRow.FindControl("txtFirstNameFooter") as TextBox).Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@LastName", (gvUsers.FooterRow.FindControl("txtLastNameFooter") as TextBox).Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Contact", (gvUsers.FooterRow.FindControl("txtContactFooter") as TextBox).Text.Trim());
@@ -165,9 +166,10 @@ public partial class Database : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                string query = "UPDATE FinalTable SET FirstName=@FirstName,LastName=@LastName,Username=@Username,Contact=@Contact,Email=@Email,Password=@Password,Type=@Type,Verified=@Verified WHERE UserID=@id";
+                string query = "UPDATE FinalTable SET IDNumber=@IDNumber,FirstName=@FirstName,LastName=@LastName,Username=@Username,Contact=@Contact,Email=@Email,Password=@Password,Type=@Type,Verified=@Verified WHERE UserID=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
+                sqlCmd.Parameters.AddWithValue("@IDNumber", (gvUsers.Rows[e.RowIndex].FindControl("txtID") as TextBox).Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@FirstName", (gvUsers.Rows[e.RowIndex].FindControl("txtFirstName") as TextBox).Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@LastName", (gvUsers.Rows[e.RowIndex].FindControl("txtLastName") as TextBox).Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@Contact", (gvUsers.Rows[e.RowIndex].FindControl("txtContact") as TextBox).Text.Trim());

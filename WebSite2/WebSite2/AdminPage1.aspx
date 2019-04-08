@@ -9,43 +9,45 @@
             src: url(fonts/OpenSansCondensed-Light.ttf);
             font-family: banger;
         }
+
         @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
+
         @font-face {
             src: url(fonts/KaushanScript-Regular.ttf);
             font-family: mech;
         }
 
-    body {
+        body {
             margin: 0;
             padding: 0;
-            background: url(images/bg.jpg);
+            background: url(images/blur.jpg);
             background-size: cover;
         }
 
-         
-         
+
+
 
         .buttonDane input[type="submit"] {
             margin: 0;
             padding: 0;
             border: 1px solid WHITE;
-              background: rgba(0,0,0,0);
+            background: rgba(0,0,0,0);
             height: 33px;
             width: 68px;
             left: 0%;
             position: absolute;
-             
             color: #fff;
             font-size: 14px;
             margin-left: 5px;
             margin-top: 5px;
+               border-radius: 20px;
         }
 
             .buttonDane input[type="submit"]:hover {
-                  border: 1px solid WHITE;
+                border: 1px solid WHITE;
                 cursor: pointer;
                 color: #262626;
                 transition: .3s;
@@ -258,7 +260,7 @@
                     color: #39dc79;
                 }
 
-nav {
+        nav {
             top: 0;
             left: 0;
             width: 100%;
@@ -323,13 +325,13 @@ nav {
                 <li><a>
                     <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click">HOME</asp:LinkButton>
                 </a></li>
-             
-                    <li><a>
-                           <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
-                    </a></li>
-            
 
-                
+                <li><a>
+                    <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
+                </a></li>
+
+
+
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
                 </a></li>

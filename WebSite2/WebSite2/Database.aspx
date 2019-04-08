@@ -5,36 +5,38 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-         @font-face {
+        @font-face {
             src: url(fonts/OpenSansCondensed-Light.ttf);
             font-family: banger;
         }
+
         @font-face {
             src: url(fonts/MarckScript-Regular.ttf);
             font-family: marc;
         }
+
         @font-face {
             src: url(fonts/KaushanScript-Regular.ttf);
             font-family: mech;
         }
 
-       body {
+        body {
             margin: 0;
             padding: 0;
-            background: url(images/bg.jpg);
+            background: url(images/blur.jpg);
             background-size: cover;
         }
 
         .buttonDane input[type="submit"] {
             margin: 0;
             padding: 0;
-               border: 1px solid WHITE;
-               background: rgba(0,0,0,0);
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0);
             height: 33px;
             width: 68px;
             left: 0%;
             position: absolute;
-         
+            border-radius: 20px;
             color: #fff;
             font-size: 14px;
             margin-left: 5px;
@@ -50,7 +52,7 @@
         .gridviewBox {
             width: 80%;
             height: 70%;
-             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             background: rgba(0, 0, 0, 0.7);
             color: #fff;
             top: 50%;
@@ -115,7 +117,7 @@
 
 
 
-    
+
         .generalLabel {
             top: 11%;
             left: 50%;
@@ -132,7 +134,7 @@
             color: aliceblue;
         }
 
-       nav {
+        nav {
             top: 0;
             left: 0;
             width: 100%;
@@ -143,7 +145,7 @@
         }
 
             nav .brand h2 {
-                 padding: 0;
+                padding: 0;
                 margin: 18px, 0;
                 color: WHITE;
                 float: left;
@@ -197,11 +199,11 @@
                 <li><a>
                     <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click">HOME</asp:LinkButton>
                 </a></li>
-   
-                    <li><a>
-                           <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
-                    </a></li>
-             
+
+                <li><a>
+                    <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
+                </a></li>
+
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
                 </a></li>
@@ -275,6 +277,18 @@
                         </FooterTemplate>
                     </asp:TemplateField>
 
+                    <asp:TemplateField HeaderText="ID NUMBER">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("IDNumber") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtID" Text='<%# Eval("IDNumber") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                            <asp:TextBox ID="txtIDFooter" runat="server" />
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
                     <asp:TemplateField HeaderText="CONTACT">
                         <ItemTemplate>
                             <asp:Label Text='<%# Eval("Contact") %>' runat="server" />
@@ -312,7 +326,7 @@
                         </FooterTemplate>
                     </asp:TemplateField>
 
-                       <asp:TemplateField HeaderText="PASSWORD">
+                    <asp:TemplateField HeaderText="PASSWORD">
                         <ItemTemplate>
                             <asp:Label Text='<%# Eval("Password") %>' runat="server" />
                         </ItemTemplate>
@@ -324,7 +338,7 @@
                         </FooterTemplate>
                     </asp:TemplateField>
 
-    
+
 
                     <asp:TemplateField HeaderText="TYPE">
                         <ItemTemplate>

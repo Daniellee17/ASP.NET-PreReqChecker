@@ -28,7 +28,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url(images/bg.jpg);
+            background: url(images/blur.jpg);
             background-size: cover;
         }
 
@@ -40,7 +40,6 @@
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
-           
             font-family: banger;
             margin-left: auto;
             margin-right: auto;
@@ -59,13 +58,12 @@
         .buttonDane input[type="submit"] {
             margin: 0;
             padding: 0;
-           
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0);
             height: 33px;
             width: 68px;
             left: 0%;
             position: absolute;
-                 border: 1px solid WHITE;
-               background: rgba(0,0,0,0);
             color: #fff;
             font-size: 14px;
             margin-left: 5px;
@@ -82,7 +80,8 @@
         .detailsBox {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 40%;
             left: 10%;
@@ -119,14 +118,13 @@
                 font-size: 15px;
             }
 
-                  .detailsBox input[type="submit"] {
-                    border: 1px solid WHITE;
-               background: rgba(0,0,0,0);
+            .detailsBox input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
                 height: 30px;
-               border-radius:20px;
+                border-radius: 20px;
                 color: #fff;
                 font-size: 15px;
-              
             }
 
                 .detailsBox input[type="submit"]:hover {
@@ -150,7 +148,8 @@
         .listBox1 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 40%;
             left: 26%;
@@ -174,7 +173,8 @@
         .listBox2 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 40%;
             left: 42%;
@@ -200,7 +200,8 @@
         .listBox3 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 40%;
             left: 58%;
@@ -227,7 +228,8 @@
         .listBox4 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 40%;
             left: 74%;
@@ -261,7 +263,8 @@
         .listBox5 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 40%;
             left: 90%;
@@ -288,7 +291,8 @@
         .listBox6 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 83%;
             left: 10%;
@@ -315,7 +319,8 @@
         .listBox7 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 83%;
             left: 26%;
@@ -342,7 +347,8 @@
         .listBox8 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 83%;
             left: 42%;
@@ -368,7 +374,8 @@
         .listBox9 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 83%;
             left: 58%;
@@ -395,7 +402,8 @@
         .listBox10 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 83%;
             left: 74%;
@@ -420,7 +428,8 @@
         .listBox11 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 83%;
             left: 90%;
@@ -446,7 +455,8 @@
         .listBox12 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 126%;
             left: 10%;
@@ -473,7 +483,8 @@
         .listBox13 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
             top: 126%;
             left: 26%;
@@ -496,7 +507,8 @@
                     color: #39dc79;
                 }
 
-      nav {
+
+        nav {
             top: 0;
             left: 0;
             width: 100%;
@@ -564,7 +576,7 @@
                 <div class="myClass" id="myID" runat="server">
 
                     <li><a>
-                           <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
+                        <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
                     </a></li>
                 </div>
 
@@ -1293,7 +1305,7 @@
 
             <p>Hard Requesite</p>
             <asp:Label ID="LBL_Hard" runat="server" Text="Not logged in" Font-Size="12px"></asp:Label><br />
-          
+
         </div>
 
 

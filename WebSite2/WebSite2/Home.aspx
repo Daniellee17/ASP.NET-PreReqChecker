@@ -24,7 +24,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url(images/bg.jpg);
+            background: url(images/blur.jpg);
             background-size: cover;
         }
 

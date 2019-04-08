@@ -12,6 +12,7 @@ public partial class Login : System.Web.UI.Page
     int admin = 0;
     string typestored;
     string fnstored;
+    string idstored;
     int guest = 0;
     int loggedin = 0;
 
@@ -62,6 +63,7 @@ public partial class Login : System.Web.UI.Page
             string query2 = "SELECT Type FROM FinalTable WHERE Username=@Username";
             string queryReset = "SELECT Password FROM FinalTable WHERE Username=@Username";
             string query3 = "SELECT FirstName FROM FinalTable WHERE Username=@Username";
+            string query4 = "SELECT IDNumber FROM FinalTable WHERE Username=@Username";
             SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
             sqlCmd.Parameters.AddWithValue("@Username", TBuser.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Password", TBpass.Text.Trim());
@@ -71,6 +73,9 @@ public partial class Login : System.Web.UI.Page
 
             SqlCommand sqlCmd3 = new SqlCommand(query3, sqlCon);
             sqlCmd3.Parameters.AddWithValue("@Username", TBuser.Text.Trim());
+
+            SqlCommand sqlCmd32 = new SqlCommand(query4, sqlCon);
+            sqlCmd32.Parameters.AddWithValue("@Username", TBuser.Text.Trim());
 
             SqlCommand sqlCmd4 = new SqlCommand(queryReset, sqlCon);
             sqlCmd4.Parameters.AddWithValue("@Username", TBuser.Text.Trim());
@@ -85,21 +90,29 @@ public partial class Login : System.Web.UI.Page
                 object value = sqlCmd2.ExecuteScalar();
                 object value2 = sqlCmd3.ExecuteScalar();
                 object value3 = sqlCmd4.ExecuteScalar();
+                object value4 = sqlCmd32.ExecuteScalar();
 
 
                 if (value != null)
                 {
                     typestored = value.ToString();
+
                 }
                 if (value2 != null)
                 {
                     fnstored = value2.ToString();
                 }
+                if (value4 != null)
+                {
+                    idstored = value4.ToString();
+                }
                 if (typestored == "Administrator")
                 {
                     Session["Username"] = TBuser.Text.Trim();
                     Session["FirstName"] = fnstored;
+                    Session["IDNUmber"] = idstored;
                     Session["Type"] = "Administrator";
+
 
                     if(value3.ToString() == "reset")
                     {
@@ -116,6 +129,7 @@ public partial class Login : System.Web.UI.Page
                 else
                 {
                     Session["Username"] = TBuser.Text.Trim();
+                    Session["IDNUmber"] = idstored;
                     Session["FirstName"] = fnstored;
                     Session["Type"] = "Standard";
 

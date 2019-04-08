@@ -24,7 +24,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url(images/bg.jpg);
+            background: url(images/blur.jpg);
             background-size: cover;
         }
 
@@ -244,6 +244,10 @@
             <asp:Label ID="LBL_Username" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
             <br />
 
+            <p>ID Number</p>
+            <asp:Label ID="LBL_ID" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
+            <br />
+
 
 
             <p>Email Address</p>
@@ -277,8 +281,8 @@
             </script>
 
             <asp:Button ID="BTNchange" runat="server" Text="Change Password" OnClick="BTNchange_Click" />
-            <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click" Font-Bold="false" ForeColor="WHITE" Visible="false" />
-            <asp:Button ID="BTNGrid" runat="server" Text="MasterDB" Font-Bold="false" ForeColor="WHITE" OnClick="BTNGrid_Click" Visible="false" />
+            <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click" Font-Bold="false" Visible="false" />
+            <asp:Button ID="BTNGrid" runat="server" Text="MasterDB" Font-Bold="false" OnClick="BTNGrid_Click" Visible="false" />
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
 

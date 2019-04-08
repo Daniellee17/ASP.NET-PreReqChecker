@@ -91,6 +91,11 @@ public partial class MyAccount : System.Web.UI.Page
             if (Tb1.Text != "")
                 LBL_Username.Text = Tb1.Text.Trim();
 
+            ////////// ID NUMBER ////////////////
+
+            LBL_ID.Text = Session["IDNumber"].ToString();
+
+
             ////////// EMAIL ////////////////
             SqlCommand bb = new SqlCommand("SELECT Email FROM FinalTable WHERE Username=@Username", sqlCon1);
             bb.Parameters.AddWithValue("@Username", Tb1.Text.Trim());
@@ -112,6 +117,8 @@ public partial class MyAccount : System.Web.UI.Page
             object value = c.ExecuteScalar();
             if (value != null)
                 LBL_Type.Text = value.ToString();
+
+
 
 
 
