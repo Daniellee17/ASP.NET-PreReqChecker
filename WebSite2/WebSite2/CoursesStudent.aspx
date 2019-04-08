@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Courses.aspx.cs" Inherits="Courses" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CoursesStudent.aspx.cs" Inherits="CoursesStudent" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -629,28 +629,19 @@
                 <Columns>
 
 
-                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                    <asp:TemplateField HeaderText="TAKEN" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
                         <ItemTemplate>
-                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View0"></asp:LinkButton>
+                            <asp:LinkButton Text='<%# Eval("CoursesTaken") %>' runat="server" CommandName="View0"></asp:LinkButton>
 
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("CoursesTaken") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
                         </FooterTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
-                        <ItemTemplate>
-                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
-                        </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                        </FooterTemplate>
-                    </asp:TemplateField>
+                  
 
 
 

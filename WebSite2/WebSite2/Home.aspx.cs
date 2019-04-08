@@ -46,7 +46,7 @@ public partial class Home : System.Web.UI.Page
         }
     }
 
- 
+
     protected void LB_login_Click(object sender, EventArgs e)
     {
 
@@ -125,18 +125,35 @@ public partial class Home : System.Web.UI.Page
 
     protected void BTN_118_Click(object sender, EventArgs e)
     {
-       
-            Response.Redirect("Courses.aspx");
-        
 
-        
+        if (loggedin == 1 && admin == 0)
+        {
+            Response.Redirect("CoursesStudent.aspx");
+        }
+        else
+        {
+            Response.Redirect("Courses.aspx");
+        }
+
+
+
+
+
+
     }
 
 
     protected void BTN_115_Click(object sender, EventArgs e)
     {
+        if (loggedin == 1 && admin == 0)
+        {
+            Response.Redirect("Courses115Student.aspx");
+        }
+        else
+        {
+            Response.Redirect("Courses115.aspx");
+        }
 
-        Response.Redirect("Courses115.aspx");
 
 
 

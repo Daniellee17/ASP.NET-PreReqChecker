@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Courses.aspx.cs" Inherits="Courses" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Courses115Student.aspx.cs" Inherits="Courses115Student" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -507,6 +507,7 @@
                     color: #39dc79;
                 }
 
+
         nav {
             top: 0;
             left: 0;
@@ -586,9 +587,6 @@
                     </a></li>
                 </div>
 
-
-
-
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
                 </a></li>
@@ -601,7 +599,7 @@
 
         <div class="subLabel">
 
-            <asp:Label ID="Label4" runat="server" Text="2018 CURRICULUM CHECKLIST"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="2015 CURRICULUM CHECKLIST"></asp:Label>
 
 
         </div>
@@ -627,7 +625,6 @@
                 <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
 
                 <Columns>
-
 
                     <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
                         <ItemTemplate>
@@ -1232,7 +1229,57 @@
                 </Columns>
             </asp:GridView>
         </div>
+        <div class="listBox13">
 
+            <h1>TERM THIRTEEN</h1>
+            <asp:GridView ID="gvUsers13" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers13_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
+
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="COURSE" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View13"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
+
+
+        </div>
         <div class="detailsBox">
             <asp:TextBox ID="TB_Search" runat="server" placeholder="Enter course code" Width="90px"></asp:TextBox>
             <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" />
