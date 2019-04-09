@@ -196,7 +196,26 @@ public partial class MyAccount : System.Web.UI.Page
 
     }
 
+    protected void BTNEdit118_Click(object sender, EventArgs e)
+    {
 
+        Response.Redirect("Edit118.aspx");
+
+    }
+
+    protected void BTNAdd118_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("Add118.aspx");
+
+    }
+
+    protected void BTNAdd115_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("Add115.aspx");
+
+    }
 
 
 

@@ -318,9 +318,9 @@
         <div class="admin2-box" id="admin2" runat="server">
             <h1>COURSES DATABASE</h1>
             <asp:Button ID="BTNcoursesDB" runat="server" Text="Edit 115" Font-Bold="false" OnClick="BTNcoursesDB_Click" />
-            <asp:Button ID="BTNcoursesDB118" runat="server" Text="Edit 118" Font-Bold="false" />
-            <asp:Button ID="BTNcoursesDBAdd" runat="server" Text="Add 115" Font-Bold="false" />
-            <asp:Button ID="BTNcoursesDBAdd118" runat="server" Text="Add 118" Font-Bold="false" />
+            <asp:Button ID="BTNcoursesDB118" runat="server" Text="Edit 118" Font-Bold="false" OnClick="BTNEdit118_Click" />
+            <asp:Button ID="BTNcoursesDBAdd" runat="server" Text="Add 115" Font-Bold="false" OnClick="BTNAdd115_Click" />
+            <asp:Button ID="BTNcoursesDBAdd118" runat="server" Text="Add 118" Font-Bold="false" OnClick="BTNAdd118_Click" />
         </div>
 
         <div class="login-box">
