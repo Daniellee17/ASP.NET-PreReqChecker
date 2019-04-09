@@ -143,7 +143,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '3rd Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 3'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -178,7 +178,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '4th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 4'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -213,7 +213,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '5th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 5'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -248,7 +248,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '6th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 6'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -283,7 +283,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '7th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 7'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -318,7 +318,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '8th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 8'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -353,7 +353,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '9th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 9'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -388,7 +388,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '10th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 10'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -423,7 +423,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '11th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 11'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -458,7 +458,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '12th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 12'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -493,7 +493,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '13th Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 13'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
