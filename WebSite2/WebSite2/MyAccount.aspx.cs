@@ -217,6 +217,12 @@ public partial class MyAccount : System.Web.UI.Page
 
     }
 
+    protected void BTNStudent_Click(object sender, EventArgs e)
+    {
+        Session["StudentChosen"] = DropDownList1.SelectedValue.ToString();
+        Response.Redirect("My115.aspx");
+
+    }
 
 
     protected void BTNreset_Click(object sender, EventArgs e)

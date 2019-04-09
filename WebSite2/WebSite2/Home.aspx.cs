@@ -24,11 +24,13 @@ public partial class Home : System.Web.UI.Page
 
             if (Session["Type"] == "Administrator")
             {
+                hideUserID.Visible = false;
                 admin = 1;
                 LblName.Text = "Welcome, " + " Admin " + Session["FirstName"] + "!";
             }
             else
             {
+                hideID.Visible = false;
                 admin = 0;
                 LblName.Text = "Welcome, " + Session["FirstName"] + "!";
 
@@ -39,6 +41,7 @@ public partial class Home : System.Web.UI.Page
 
         else
         {
+            hideUserID.Visible = false;
             myID.Visible = false;
             guest = 1;
             LblName.Text = "Welcome, Guest!";
@@ -126,14 +129,9 @@ public partial class Home : System.Web.UI.Page
     protected void BTN_118_Click(object sender, EventArgs e)
     {
 
-        if (loggedin == 1 && admin == 0)
-        {
-            Response.Redirect("CoursesStudent.aspx");
-        }
-        else
-        {
+        
             Response.Redirect("Courses.aspx");
-        }
+        
 
 
 
@@ -145,14 +143,20 @@ public partial class Home : System.Web.UI.Page
 
     protected void BTN_115_Click(object sender, EventArgs e)
     {
-        if (loggedin == 1 && admin == 0)
-        {
-            Response.Redirect("Courses115Student.aspx");
-        }
-        else
-        {
-            Response.Redirect("Courses115.aspx");
-        }
+
+        Response.Redirect("Courses115.aspx");
+
+
+
+
+
+    }
+
+    protected void BTN_User_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("MyMy115.aspx");
+
 
 
 

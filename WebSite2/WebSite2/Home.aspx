@@ -220,12 +220,24 @@
         </div>
 
         <div class="buttons">
-            <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" Style="top: 67%; left: 51%;" />
-            <br />
-            <br />
-            <asp:Button ID="BTN_115" runat="server" Text="ID 117 and Below" OnClick="BTN_115_Click" Style="top: 67%; left: 40%;" />
-            <br />
-            <br />
+            <div class="hide" id="hideID" runat="server">
+
+                <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" Style="top: 67%; left: 51%;" />
+                <br />
+                <br />
+                <asp:Button ID="BTN_115" runat="server" Text="ID 117 and Below" OnClick="BTN_115_Click" Style="top: 67%; left: 40%;" />
+                <br />
+                <br />
+            </div>
+
+               <div class="hideUser" id="hideUserID" runat="server">
+
+                
+                <asp:Button ID="BTN_User" runat="server" Text="My Flowchart" OnClick="BTN_User_Click" Style="top: 67%; left: 45%;width:250px" />
+                <br />
+                <br />
+            </div>
+
             <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 67%; width: 205px; left: 62%;" />
 
         </div>

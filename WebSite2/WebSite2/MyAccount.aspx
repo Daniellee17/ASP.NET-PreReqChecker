@@ -28,6 +28,67 @@
             background-size: cover;
         }
 
+         .ddl
+        {
+             margin: 0;
+            padding: 0;
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0.6);
+            height: 33px;
+            width: 100%;
+            left: 0%;
+        
+            border-radius: 20px;
+            color: #fff;
+            font-size: 14px;
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-bottom:10px;
+        }
+
+          .admin0-box {
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 40%;
+            left: 25%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 20px 30px;
+            font-family: sans-serif;
+        }
+
+            .admin0-box h1 {
+                margin: 0;
+                padding: 0 0 10px;
+                text-align: center;
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+                 
+
+            .admin0-box input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                width: 100%;
+                height: 40px;
+                color: #fff;
+                font-size: 16px;
+                border-radius: 16px;
+                margin-bottom: 10px;
+            }
+
+                .admin0-box input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
+                }
+
         .admin1-box {
             width: 300px;
             height: 200px;
@@ -307,7 +368,14 @@
 
         <asp:HiddenField ID="hfUserID" runat="server" />
 
+             <div class="admin0-box" id="Div1" runat="server">
+            <h1>STUDENT DATABASE</h1>
+                  <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="IDNumber" DataValueField="IDNumber" AutoPostBack="True" CssClass="ddl">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT [IDNumber] FROM [FinalTable] ORDER BY [IDNumber]"></asp:SqlDataSource>
+            <asp:Button ID="BTNstudent" runat="server" Text="View" Font-Bold="false" OnClick="BTNStudent_Click" />
 
+        </div>
         <div class="admin1-box" id="admin1" runat="server">
             <h1>USER DATABASE</h1>
             <asp:Button ID="BTNAccounts" runat="server" Text="Approve/Pend" OnClick="BTNAccounts_Click" Font-Bold="false" />
