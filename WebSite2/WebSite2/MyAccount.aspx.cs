@@ -28,13 +28,13 @@ public partial class MyAccount : System.Web.UI.Page
             {
                 admin = 1;
                 LblName.Text = "Welcome, " + " Admin " + Session["FirstName"] + "!";
-                BTNAccounts.Visible = true;
-                BTNGrid.Visible = true;
-                BTNcoursesDB.Visible = true;
+         
             }
             else
             {
                 admin = 0;
+                admin1.Visible = false;
+                admin2.Visible = false;
                 LblName.Text = "Welcome, " + Session["FirstName"] + "!";
 
 

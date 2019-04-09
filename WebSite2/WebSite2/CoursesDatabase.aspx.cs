@@ -21,7 +21,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
         this.UnobtrusiveValidationMode =
             System.Web.UI.UnobtrusiveValidationMode.None;
 
-       
+
         if (Session["Username"] != null)
         {
             loggedin = 1;
@@ -51,7 +51,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
         if (!IsPostBack)
         {
           
-
+            PopulateGridView();
         }
     }
 
@@ -59,6 +59,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
     {
         try
         {
+           
             DataTable dtbl = new DataTable();
 
 
@@ -66,7 +67,11 @@ public partial class CoursesDatabase : System.Web.UI.Page
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo=@TermNo", sqlCon);
-                sqlDa.SelectCommand.Parameters.AddWithValue("@TermNo", ddl_value);               
+
+               
+                    sqlDa.SelectCommand.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
+                
+
                 sqlDa.Fill(dtbl);
 
             }
@@ -116,23 +121,20 @@ public partial class CoursesDatabase : System.Web.UI.Page
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    string query = "INSERT INTO FinalTable (IDNumber,FirstName,LastName,Username,Contact,Email,Password,Type,Verified) VALUES (@IDNumber,@FirstName,@LastName,@Username,@Contact,@Email,@Password,@Type,@Verified)";
+                    string query = "INSERT INTO FlowchartTable115 (TermNo,Course,CourseTitle,Units,SoftReq,CoReq,HardReq) VALUES (@TermNo,@Course,@CourseTitle,@Units,@SoftReq,@CoReq,@HardReq)";
                     SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-
-                    sqlCmd.Parameters.AddWithValue("@IDNumber", (gvUsers.FooterRow.FindControl("txtIDFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@FirstName", (gvUsers.FooterRow.FindControl("txtFirstNameFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@LastName", (gvUsers.FooterRow.FindControl("txtLastNameFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Contact", (gvUsers.FooterRow.FindControl("txtContactFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Username", (gvUsers.FooterRow.FindControl("txtUsernameFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Email", (gvUsers.FooterRow.FindControl("txtEmailFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Password", (gvUsers.FooterRow.FindControl("txtPasswordFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Type", (gvUsers.FooterRow.FindControl("txtTypeFooter") as TextBox).Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Verified", (gvUsers.FooterRow.FindControl("txtVerifiedFooter") as TextBox).Text.Trim());
-
+                    sqlCmd.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
+                    sqlCmd.Parameters.AddWithValue("@Course", (gvUsers.FooterRow.FindControl("txtCourseFooter") as TextBox).Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@CourseTitle", (gvUsers.FooterRow.FindControl("txtCourseTitleFooter") as TextBox).Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Units", (gvUsers.FooterRow.FindControl("txtUnitsFooter") as TextBox).Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@SoftReq", (gvUsers.FooterRow.FindControl("txtSoftFooter") as TextBox).Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@CoReq", (gvUsers.FooterRow.FindControl("txtCoFooter") as TextBox).Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@HardReq", (gvUsers.FooterRow.FindControl("txtHardFooter") as TextBox).Text.Trim());
 
                     sqlCmd.ExecuteNonQuery();
                     PopulateGridView();
                     LBL.Text = "New Record Added";
+                 
 
 
                 }
@@ -168,25 +170,24 @@ public partial class CoursesDatabase : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                string query = "UPDATE FinalTable SET IDNumber=@IDNumber,FirstName=@FirstName,LastName=@LastName,Username=@Username,Contact=@Contact,Email=@Email,Password=@Password,Type=@Type,Verified=@Verified WHERE UserID=@id";
+                string query = "UPDATE FlowchartTable115 SET Course=@Course,CourseTitle=@CourseTitle,Units=@Units,SoftReq=@SoftReq,CoReq=@CoReq,HardReq=@HardReq WHERE id=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
-                sqlCmd.Parameters.AddWithValue("@IDNumber", (gvUsers.Rows[e.RowIndex].FindControl("txtID") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@FirstName", (gvUsers.Rows[e.RowIndex].FindControl("txtFirstName") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@LastName", (gvUsers.Rows[e.RowIndex].FindControl("txtLastName") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Contact", (gvUsers.Rows[e.RowIndex].FindControl("txtContact") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Username", (gvUsers.Rows[e.RowIndex].FindControl("txtUsername") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Email", (gvUsers.Rows[e.RowIndex].FindControl("txtEmail") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Password", (gvUsers.Rows[e.RowIndex].FindControl("txtPassword") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Type", (gvUsers.Rows[e.RowIndex].FindControl("txtType") as TextBox).Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Verified", (gvUsers.Rows[e.RowIndex].FindControl("txtVerified") as TextBox).Text.Trim());
+
+          
+                sqlCmd.Parameters.AddWithValue("@Course", (gvUsers.Rows[e.RowIndex].FindControl("txtCourse") as TextBox).Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@CourseTitle", (gvUsers.Rows[e.RowIndex].FindControl("txtCourseTitle") as TextBox).Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@Units", (gvUsers.Rows[e.RowIndex].FindControl("txtUnits") as TextBox).Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@SoftReq", (gvUsers.Rows[e.RowIndex].FindControl("txtSoft") as TextBox).Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@CoReq", (gvUsers.Rows[e.RowIndex].FindControl("txtCo") as TextBox).Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@HardReq", (gvUsers.Rows[e.RowIndex].FindControl("txtHard") as TextBox).Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
                 sqlCmd.ExecuteNonQuery();
                 gvUsers.EditIndex = -1;
                 PopulateGridView();
                 LBL.Text = "Record Updated";
-
-                Response.Redirect(Request.RawUrl);
+                PopulateGridView();
+       
 
             }
 
@@ -205,7 +206,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                string query = "DELETE FROM FinalTable WHERE UserID=@id";
+                string query = "DELETE FROM FlowchartTable115 WHERE id=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
                 sqlCmd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
@@ -225,9 +226,11 @@ public partial class CoursesDatabase : System.Web.UI.Page
 
     protected void BTN_View_Click(object sender, EventArgs e)
     {
+       
 
         ddl_value = DropDownList1.SelectedValue;
         Label1.Text = ddl_value;
+ 
         PopulateGridView();
 
     }

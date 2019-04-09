@@ -28,6 +28,88 @@
             background-size: cover;
         }
 
+        .admin1-box {
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 40%;
+            left: 75%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 20px 30px;
+            font-family: sans-serif;
+        }
+
+            .admin1-box h1 {
+                margin: 0;
+                padding: 0 0 10px;
+                text-align: center;
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+            .admin1-box input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                width: 100%;
+                height: 40px;
+                color: #fff;
+                font-size: 16px;
+                border-radius: 16px;
+                margin-bottom: 10px;
+            }
+
+                .admin1-box input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
+                }
+
+        .admin2-box {
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 63%;
+            left: 75%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 20px 30px;
+            font-family: sans-serif;
+        }
+
+            .admin2-box h1 {
+                margin: 0;
+                padding: 0 0 10px;
+                text-align: center;
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+            .admin2-box input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                width: 49%;
+                height: 40px;
+                color: #fff;
+                font-size: 16px;
+                border-radius: 16px;
+                margin-bottom: 10px;
+            }
+
+                .admin2-box input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
+                }
+
         .login-box {
             width: 540px;
             height: 550px;
@@ -99,6 +181,7 @@
             color: #fff;
             font-size: 16px;
             border-radius: 16px;
+            margin-top: 20px;
         }
 
             .login-box input[type="submit"]:hover {
@@ -224,6 +307,22 @@
 
         <asp:HiddenField ID="hfUserID" runat="server" />
 
+
+        <div class="admin1-box" id="admin1" runat="server">
+            <h1>USER DATABASE</h1>
+            <asp:Button ID="BTNAccounts" runat="server" Text="Approve/Pend" OnClick="BTNAccounts_Click" Font-Bold="false" />
+            <asp:Button ID="BTNGrid" runat="server" Text="Edit" Font-Bold="false" OnClick="BTNGrid_Click" />
+
+        </div>
+
+        <div class="admin2-box" id="admin2" runat="server">
+            <h1>COURSES DATABASE</h1>
+            <asp:Button ID="BTNcoursesDB" runat="server" Text="Edit 115" Font-Bold="false" OnClick="BTNcoursesDB_Click" />
+            <asp:Button ID="BTNcoursesDB118" runat="server" Text="Edit 118" Font-Bold="false" />
+            <asp:Button ID="BTNcoursesDBAdd" runat="server" Text="Add 115" Font-Bold="false" />
+            <asp:Button ID="BTNcoursesDBAdd118" runat="server" Text="Add 118" Font-Bold="false" />
+        </div>
+
         <div class="login-box">
 
             <h1>ACCOUNT OVERVIEW</h1>
@@ -266,9 +365,6 @@
             <asp:Label ID="LBL_Type" runat="server" Text="Not logged in" Font-Size="16px"></asp:Label><br />
 
 
-            <br />
-            <br />
-
 
             <asp:Button ID="BTNreset" runat="server" Text="Reset Password" OnClientClick=" JSalert();" OnClick="BTNreset_Click" />
 
@@ -281,9 +377,7 @@
             </script>
 
             <asp:Button ID="BTNchange" runat="server" Text="Change Password" OnClick="BTNchange_Click" />
-            <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click" Font-Bold="false" Visible="false" />
-            <asp:Button ID="BTNGrid" runat="server" Text="UserDB" Font-Bold="false" OnClick="BTNGrid_Click" Visible="false" />
-            <asp:Button ID="BTNcoursesDB" runat="server" Text="CoursesDB" Font-Bold="false" OnClick="BTNcoursesDB_Click" Visible="false" />
+
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
 

@@ -73,7 +73,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '1st Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 1'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -108,7 +108,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = '2nd Term'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo = 'Term 2'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }

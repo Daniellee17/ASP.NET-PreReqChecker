@@ -357,15 +357,15 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 <Columns>
 
-                    <asp:TemplateField HeaderText="TERM">
+                    <asp:TemplateField HeaderText="TERM NO">
                         <ItemTemplate>
                             <asp:Label Text='<%# Eval("TermNo") %>' runat="server" />
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtTerm" Text='<%# Eval("TermNo") %>' runat="server" />
+                            <asp:TextBox ID="txtTermNo" Text='<%# Eval("TermNo") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-                            <asp:TextBox ID="txtTermFooter" runat="server" />
+                         
                         </FooterTemplate>
                     </asp:TemplateField>
 
