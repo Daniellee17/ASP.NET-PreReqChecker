@@ -336,7 +336,7 @@
                 ShowHeaderWhenEmpty="true"
               
            
-                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 40px; font-size: 12px; position: center"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 40px; font-size: 15px; position: center"
                 OnSelectedIndexChanged="gvUsers_SelectedIndexChanged">
 
                 <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
@@ -361,9 +361,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtTermNo" Text='<%# Eval("TermNo") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                         
-                        </FooterTemplate>
+                      
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="COURSE">
@@ -373,9 +371,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtCourse" Text='<%# Eval("Course") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtCourseFooter" runat="server" />
-                        </FooterTemplate>
+                       
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="COURSE TITLE">
@@ -385,9 +381,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtCourseTitle" Text='<%# Eval("CourseTitle") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtCourseTitleFooter" runat="server" />
-                        </FooterTemplate>
+                     
                     </asp:TemplateField>
 
                     
@@ -398,9 +392,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtPassed" Text='<%# Eval("Passed") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtPassedFooter" runat="server" />
-                        </FooterTemplate>
+                       
                     </asp:TemplateField>
 
 
@@ -411,9 +403,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtUnits" Text='<%# Eval("Units") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtUnitsFooter" runat="server" />
-                        </FooterTemplate>
+                      
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="SOFT">
@@ -423,9 +413,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtSoft" Text='<%# Eval("SoftReq") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtSoftFooter" runat="server" />
-                        </FooterTemplate>
+                      
                     </asp:TemplateField>
 
 
@@ -436,9 +424,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtCo" Text='<%# Eval("CoReq") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtCoFooter" runat="server" />
-                        </FooterTemplate>
+                        
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="HARD">
@@ -448,9 +434,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtHard" Text='<%# Eval("HardReq") %>' runat="server" />
                         </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtHardFooter" runat="server" />
-                        </FooterTemplate>
+                       
                     </asp:TemplateField>
 
 
