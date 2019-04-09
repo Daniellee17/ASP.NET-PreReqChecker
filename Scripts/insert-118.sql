@@ -1,5 +1,4 @@
 USE [ageDB]
- t Term
  INSERT INTO FlowchartTable118 (TermNo, Course,CourseTitle,Units, SoftReq, CoReq, HardReq)
  VALUES
 
