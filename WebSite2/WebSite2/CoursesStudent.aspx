@@ -148,8 +148,8 @@
         .listBox1 {
             width: 280px;
             height: 390px;
-            background: rgba(0, 0, 0, 0.75);
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0);
+          
             color: #fff;
             top: 40%;
             left: 26%;
@@ -170,13 +170,39 @@
                     color: #39dc79;
                 }
 
+
+        .listBox1_1 {
+            width: 280px;
+            height: 390px;
+            background: rgba(0, 0, 0, 0);
+           
+            color: #fff;
+            top: 40%;
+            left: 40%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 30px;
+            font-family: sans-serif;
+        }
+
+            .listBox1_1 a {
+                text-decoration: none;
+                font-size: 14px;
+                color: #fff;
+            }
+
+                .listBox1_1 a:hover {
+                    color: #39dc79;
+                }
+
         .listBox2 {
             width: 280px;
             height: 390px;
             background: rgba(0, 0, 0, 0.75);
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             color: #fff;
-            top: 40%;
+            top: 100%;
             left: 42%;
             position: absolute;
             transform: translate(-50%,-50%);
@@ -607,8 +633,6 @@
         </div>
         <div class="listBox1">
 
-            <h1>TERM ONE</h1>
-
             <asp:GridView ID="gvUsers" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
                 ShowFooter="true"
                 DataKeyNames="id"
@@ -641,7 +665,10 @@
                         </FooterTemplate>
                     </asp:TemplateField>
 
-                  
+
+
+
+
 
 
 
@@ -652,6 +679,62 @@
             </asp:GridView>
 
 
+        </div>
+
+        <div class="listBox1_1">
+
+
+
+            <asp:GridView ID="gvUsers_1" runat="server" CellPadding="5" ForeColor="Transparent" Font-Bold="false" GridLines="None" AutoGenerateColumns="false"
+                ShowFooter="true"
+                DataKeyNames="id"
+                ShowHeaderWhenEmpty="true"
+                OnRowCommand="gvUsers_1_RowCommand"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 30px; font-size: 12px; position: center;">
+
+
+
+                <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
+                <EditRowStyle BackColor="Transparent" ForeColor="White" />
+
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="Transparent" ForeColor="white" Font-Size="15px" />
+                <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
+
+                <Columns>
+
+
+                    <asp:TemplateField HeaderText="COURSES" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:LinkButton Text='<%# Eval("Course") %>' runat="server" CommandName="View0_1"></asp:LinkButton>
+
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtFirstName" Text='<%# Eval("Course") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+
+
+
+                    <asp:TemplateField HeaderText="UNITS" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="15px" HeaderStyle-Width="100px">
+                        <ItemTemplate>
+                            <asp:Label Text='<%# Eval("Units") %>' runat="server" />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtType" Text='<%# Eval("Units") %>' runat="server" />
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
+
+                </Columns>
+            </asp:GridView>
 
 
         </div>

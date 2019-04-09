@@ -282,7 +282,8 @@
 
             <asp:Button ID="BTNchange" runat="server" Text="Change Password" OnClick="BTNchange_Click" />
             <asp:Button ID="BTNAccounts" runat="server" Text="Accounts" OnClick="BTNAccounts_Click" Font-Bold="false" Visible="false" />
-            <asp:Button ID="BTNGrid" runat="server" Text="MasterDB" Font-Bold="false" OnClick="BTNGrid_Click" Visible="false" />
+            <asp:Button ID="BTNGrid" runat="server" Text="UserDB" Font-Bold="false" OnClick="BTNGrid_Click" Visible="false" />
+            <asp:Button ID="BTNcoursesDB" runat="server" Text="CoursesDB" Font-Bold="false" OnClick="BTNcoursesDB_Click" Visible="false" />
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
 

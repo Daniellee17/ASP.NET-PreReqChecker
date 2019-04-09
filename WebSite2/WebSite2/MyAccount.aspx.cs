@@ -30,6 +30,7 @@ public partial class MyAccount : System.Web.UI.Page
                 LblName.Text = "Welcome, " + " Admin " + Session["FirstName"] + "!";
                 BTNAccounts.Visible = true;
                 BTNGrid.Visible = true;
+                BTNcoursesDB.Visible = true;
             }
             else
             {
@@ -188,6 +189,12 @@ public partial class MyAccount : System.Web.UI.Page
         }
     }
 
+    protected void BTNcoursesDB_Click(object sender, EventArgs e)
+    {
+      
+            Response.Redirect("CoursesDatabase.aspx");
+
+    }
 
 
 
