@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[FinalTable](
 	[Contact] [varchar](50) NULL,
 	[Username] [varchar](20) NULL,
 	[Email] [varchar](50) NULL,
-	[Password] [varchar](20) NULL,
+	[Password] [varchar](20) COLLATE SQL_Latin1_General_CP1_CS_AS NULL,
 	[Type] [varchar](50) NULL,
 	[Verified] [varchar](50) NULL,
  CONSTRAINT [PK_FinalTable] PRIMARY KEY CLUSTERED 
