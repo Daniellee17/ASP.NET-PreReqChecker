@@ -372,7 +372,7 @@
             <h1>STUDENT DATABASE</h1>
                   <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="IDNumber" DataValueField="IDNumber" AutoPostBack="True" CssClass="ddl">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT [IDNumber] FROM [FinalTable] ORDER BY [IDNumber]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [IDNumber] FROM [FinalTable] ORDER BY [IDNumber]"></asp:SqlDataSource>
             <asp:Button ID="BTNstudent" runat="server" Text="View" Font-Bold="false" OnClick="BTNStudent_Click" />
 
         </div>
