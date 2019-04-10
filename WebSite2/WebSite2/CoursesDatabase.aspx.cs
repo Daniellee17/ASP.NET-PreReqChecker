@@ -66,7 +66,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable115 WHERE TermNo=@TermNo", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo=@TermNo", sqlCon);
 
                
                     sqlDa.SelectCommand.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
@@ -121,7 +121,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    string query = "INSERT INTO FlowchartTable115 (TermNo,Course,CourseTitle,Units,SoftReq,CoReq,HardReq) VALUES (@TermNo,@Course,@CourseTitle,@Units,@SoftReq,@CoReq,@HardReq)";
+                    string query = "INSERT INTO dB2015 (TermNo,Course,CourseTitle,Units,SoftReq,CoReq,HardReq) VALUES (@TermNo,@Course,@CourseTitle,@Units,@SoftReq,@CoReq,@HardReq)";
                     SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
                     sqlCmd.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
                     sqlCmd.Parameters.AddWithValue("@Course", (gvUsers.FooterRow.FindControl("txtCourseFooter") as TextBox).Text.Trim());
@@ -161,6 +161,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
         PopulateGridView();
     }
 
+
     protected void gvUsers_RowUpdating(object sender, GridViewUpdateEventArgs e)
     {
 
@@ -170,7 +171,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                string query = "UPDATE FlowchartTable115 SET Course=@Course,CourseTitle=@CourseTitle,Units=@Units,SoftReq=@SoftReq,CoReq=@CoReq,HardReq=@HardReq WHERE id=@id";
+                string query = "UPDATE dB2015 SET Course=@Course,CourseTitle=@CourseTitle,Units=@Units,SoftReq=@SoftReq,CoReq=@CoReq,HardReq=@HardReq WHERE id=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
 
@@ -206,7 +207,7 @@ public partial class CoursesDatabase : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                string query = "DELETE FROM FlowchartTable115 WHERE id=@id";
+                string query = "DELETE FROM dB2015 WHERE id=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
                 sqlCmd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
@@ -223,6 +224,8 @@ public partial class CoursesDatabase : System.Web.UI.Page
             LBL.Text = ex.Message;
         }
     }
+
+
 
     protected void BTN_View_Click(object sender, EventArgs e)
     {

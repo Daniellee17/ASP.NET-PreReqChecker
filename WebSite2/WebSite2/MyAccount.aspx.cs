@@ -12,6 +12,7 @@ public partial class MyAccount : System.Web.UI.Page
     string connectionString = @"Data Source=MSI-DANE;Initial Catalog=ageDB;Integrated Security=True;";
     int admin = 0;
     int loggedin = 0;
+    string yearStr;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -94,8 +95,14 @@ public partial class MyAccount : System.Web.UI.Page
                 LBL_Username.Text = Tb1.Text.Trim();
 
             ////////// ID NUMBER ////////////////
+            SqlCommand a222 = new SqlCommand("SELECT IDNumber FROM FinalTable WHERE Username=@Username", sqlCon1);
+            a222.Parameters.AddWithValue("@Username", Tb1.Text.Trim());
+            object valuea222 = a222.ExecuteScalar();
 
-            LBL_ID.Text = Session["IDNumber"].ToString();
+            if (valuea222 != null)
+                LBL_ID.Text = valuea222.ToString();
+
+    
 
 
             ////////// EMAIL ////////////////
@@ -146,7 +153,67 @@ public partial class MyAccount : System.Web.UI.Page
         Session.RemoveAll();
         Response.Redirect("Login.aspx");
     }
+    protected void BTN_Add_Click(object sender, EventArgs e)
+    {
+        yearStr = yearTb.Text.Trim();
 
+        using (SqlConnection sqlCon = new SqlConnection(connectionString))
+        {
+            sqlCon.Open();
+
+            string query0 = "SELECT COUNT(1) FROM yearTbl WHERE Year=@Year";
+            SqlCommand sqlCmd0 = new SqlCommand(query0, sqlCon);
+            sqlCmd0.Parameters.AddWithValue("@Year", yearTb.Text.Trim());
+
+            int count = Convert.ToInt32(sqlCmd0.ExecuteScalar());
+
+            if (count == 1)
+            {
+                statusLbl.Text = "ERROR: " + yearStr + " already registered, delete it before creating another with the same year!";
+            }
+            else
+            {
+                string insertYear = "INSERT INTO yearTbl (Year) VALUES (" + yearStr + ")";
+                SqlCommand sqlCmd1 = new SqlCommand(insertYear, sqlCon);
+                sqlCmd1.ExecuteNonQuery();
+                string createYearTable = "CREATE TABLE[dbo].[dB" + yearStr + "] ([id][int] IDENTITY(1,1) NOT NULL,[TermNo] [varchar] (50) NULL, [Course] [varchar] (50) NULL, [CourseTitle] [varchar] (300) NULL, [Passed] [varchar] (50) NULL, [Units] [varchar] (50) NULL, [SoftReq] [varchar] (50) NULL,[CoReq] [varchar] (50) NULL,[HardReq] [varchar] (50) NULL,CONSTRAINT[PK_.[dB" + yearStr + "] PRIMARY KEY CLUSTERED ([id] ASC) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON[PRIMARY]) ON[PRIMARY]";
+                SqlCommand sqlCmd2 = new SqlCommand(createYearTable, sqlCon);
+                sqlCmd2.ExecuteNonQuery();
+                Response.Redirect(Request.RawUrl);
+            }
+
+
+
+
+        }
+
+    }
+    protected void BTN_View_Click(object sender, EventArgs e)
+    {
+        Session["new"] = DropDownList2.SelectedValue;
+
+        Response.Redirect("AddCurriculum.aspx");
+
+
+    }
+
+    protected void BTN_Delete_Click(object sender, EventArgs e)
+    {
+        yearStr = DropDownList2.SelectedValue;
+        using (SqlConnection sqlCon = new SqlConnection(connectionString))
+        {
+            sqlCon.Open();
+            string insertYear = "DELETE FROM yearTbl WHERE YEAR =(" + yearStr + ")";
+            SqlCommand sqlCmd1 = new SqlCommand(insertYear, sqlCon);
+            sqlCmd1.ExecuteNonQuery();
+            string createYearTable = "DROP TABLE [dB" + yearStr + "]";
+            SqlCommand sqlCmd2 = new SqlCommand(createYearTable, sqlCon);
+            sqlCmd2.ExecuteNonQuery();
+            sqlCon.Close();
+
+        }
+        Response.Redirect(Request.RawUrl);
+    }
     protected void LB_contact_Click(object sender, EventArgs e)
     {
         Response.Redirect("Contact.aspx");
@@ -193,28 +260,7 @@ public partial class MyAccount : System.Web.UI.Page
     protected void BTNcoursesDB_Click(object sender, EventArgs e)
     {
       
-            Response.Redirect("CoursesDatabase.aspx");
-
-    }
-
-    protected void BTNEdit118_Click(object sender, EventArgs e)
-    {
-
-        Response.Redirect("Edit118.aspx");
-
-    }
-
-    protected void BTNAdd118_Click(object sender, EventArgs e)
-    {
-
-        Response.Redirect("Add118.aspx");
-
-    }
-
-    protected void BTNAdd115_Click(object sender, EventArgs e)
-    {
-
-        Response.Redirect("Add115.aspx");
+            Response.Redirect("AddCurriculum.aspx");
 
     }
 

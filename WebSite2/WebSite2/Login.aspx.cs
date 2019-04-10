@@ -84,9 +84,7 @@ public partial class Login : System.Web.UI.Page
             int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
             if (count == 1)
             {
-
-               
-
+                
                 object value = sqlCmd2.ExecuteScalar();
                 object value2 = sqlCmd3.ExecuteScalar();
                 object value3 = sqlCmd4.ExecuteScalar();

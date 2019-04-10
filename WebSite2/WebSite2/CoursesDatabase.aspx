@@ -325,7 +325,7 @@
               <asp:Button ID="Button1" runat="server" Text="View" OnClick="BTN_View_Click" />
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TermNo" DataValueField="TermNo" AutoPostBack="True" CssClass="ddl">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [TermNo] FROM [FlowchartTable115] ORDER BY [TermNo]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [TermNo] FROM [db2015] ORDER BY [TermNo]"></asp:SqlDataSource>
            
         </div>
         <div class="gridviewBox">

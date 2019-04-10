@@ -7,29 +7,31 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 
-public partial class Edit118 : System.Web.UI.Page
+public partial class AddCurriculum : System.Web.UI.Page
 {
-    string connectionString = @"Data Source=MSI-DANE;Initial Catalog=ageDB;Integrated Security=True;";
-
     int admin = 0;
+    int guest = 0;
     int loggedin = 0;
-    string ddl_value;
+    string yearStr; 
+    string connectionString = @"Data Source=MSI-DANE;Initial Catalog=ageDB;Integrated Security=True;";
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        yearStr = Session["new"].ToString();
+        titleLbl.Text = Session["new"].ToString() + " Curriculum";
         this.UnobtrusiveValidationMode =
             System.Web.UI.UnobtrusiveValidationMode.None;
-
 
         if (Session["Username"] != null)
         {
             loggedin = 1;
+            regID.Visible = false;
 
             if (Session["Type"] == "Administrator")
             {
                 admin = 1;
                 LblName.Text = "Welcome, " + " Admin " + Session["FirstName"] + "!";
+
             }
             else
             {
@@ -43,18 +45,109 @@ public partial class Edit118 : System.Web.UI.Page
 
         else
         {
-
+            myID.Visible = false;
+            guest = 1;
             LblName.Text = "Welcome, Guest!";
             LB_login.Text = "Login";
         }
 
-        if (!IsPostBack)
+        if(!IsPostBack)
         {
-
+         
             PopulateGridView();
+        }
+
+
+    }
+
+
+    protected void LB_login_Click(object sender, EventArgs e)
+    {
+
+        Session.RemoveAll();
+        Response.Redirect("Login.aspx");
+    }
+    protected void LB_my_Click(object sender, EventArgs e)
+    {
+       
+            Response.Redirect("MyAccount.aspx");
+        
+
+    }
+    protected void LB_reg_Click(object sender, EventArgs e)
+    {
+        if (loggedin == 1)
+        {
+            Response.Redirect("Experiments.aspx");
+        }
+
+        else
+        {
+            Response.Redirect("Registration.aspx");
         }
     }
 
+    protected void LB_home_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
+
+    protected void LB_contact_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Contact.aspx");
+    }
+
+
+
+    protected void LB_db_Click(object sender, EventArgs e)
+    {
+        if (admin == 1)
+        {
+            Response.Redirect("Database.aspx");
+        }
+
+        else
+        {
+
+           
+        }
+
+    }
+
+
+    protected void LB_a2_Click(object sender, EventArgs e)
+    {
+        if (admin == 1)
+        {
+            Response.Redirect("AdminPage1.aspx");
+        }
+
+        else
+        {
+
+         
+        }
+    }
+
+    protected void BTN_Back_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("MyAccount.aspx");
+
+    }
+
+   
+    protected void gvUsers_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+        gvUsers.EditIndex = e.NewEditIndex;
+        PopulateGridView();
+    }
+
+    protected void gvUsers_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+    {
+        gvUsers.EditIndex = -1;
+        PopulateGridView();
+    }
     void PopulateGridView()
     {
         try
@@ -66,13 +159,10 @@ public partial class Edit118 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM FlowchartTable118 WHERE TermNo=@TermNo", sqlCon);
-
-
-                sqlDa.SelectCommand.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
-
-
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "]", sqlCon);
                 sqlDa.Fill(dtbl);
+
+
 
             }
 
@@ -103,13 +193,35 @@ public partial class Edit118 : System.Web.UI.Page
 
         catch (Exception ex)
         {
-            LBL.Text = ex.Message;
+
         }
 
     }
 
 
+    protected void gvUsers_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        try
+        {
 
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                string query = "DELETE FROM dB" + yearStr + " WHERE id=@id";
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
+                sqlCmd.ExecuteNonQuery();
+                PopulateGridView();
+
+            }
+
+        }
+
+        catch (Exception ex)
+        {
+
+        }
+    }
 
     protected void gvUsers_RowCommand(object sender, GridViewCommandEventArgs e)
     {
@@ -121,9 +233,9 @@ public partial class Edit118 : System.Web.UI.Page
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    string query = "INSERT INTO FlowchartTable118 (TermNo,Course,CourseTitle,Units,SoftReq,CoReq,HardReq) VALUES (@TermNo,@Course,@CourseTitle,@Units,@SoftReq,@CoReq,@HardReq)";
+                    string query = "INSERT INTO [dB" + yearStr + "] (TermNo,Course,CourseTitle,Units,SoftReq,CoReq,HardReq) VALUES (@TermNo,@Course,@CourseTitle,@Units,@SoftReq,@CoReq,@HardReq)";
                     SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                    sqlCmd.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
+                    sqlCmd.Parameters.AddWithValue("@TermNo", (gvUsers.FooterRow.FindControl("txtTermNoFooter") as TextBox).Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Course", (gvUsers.FooterRow.FindControl("txtCourseFooter") as TextBox).Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@CourseTitle", (gvUsers.FooterRow.FindControl("txtCourseTitleFooter") as TextBox).Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Units", (gvUsers.FooterRow.FindControl("txtUnitsFooter") as TextBox).Text.Trim());
@@ -133,7 +245,7 @@ public partial class Edit118 : System.Web.UI.Page
 
                     sqlCmd.ExecuteNonQuery();
                     PopulateGridView();
-                    LBL.Text = "New Record Added";
+
 
 
 
@@ -143,24 +255,11 @@ public partial class Edit118 : System.Web.UI.Page
         catch (Exception ex)
         {
 
-            LBL.Text = ex.Message;
+
         }
 
 
     }
-
-    protected void gvUsers_RowEditing(object sender, GridViewEditEventArgs e)
-    {
-        gvUsers.EditIndex = e.NewEditIndex;
-        PopulateGridView();
-    }
-
-    protected void gvUsers_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-    {
-        gvUsers.EditIndex = -1;
-        PopulateGridView();
-    }
-
     protected void gvUsers_RowUpdating(object sender, GridViewUpdateEventArgs e)
     {
 
@@ -170,11 +269,11 @@ public partial class Edit118 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                string query = "UPDATE FlowchartTable118 SET Course=@Course,CourseTitle=@CourseTitle,Units=@Units,SoftReq=@SoftReq,CoReq=@CoReq,HardReq=@HardReq WHERE id=@id";
+                string query = "UPDATE [dB" + yearStr + "] SET TermNo=@TermNo,Course=@Course,CourseTitle=@CourseTitle,Units=@Units,SoftReq=@SoftReq,CoReq=@CoReq,HardReq=@HardReq WHERE id=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
 
-
+                sqlCmd.Parameters.AddWithValue("@TermNo", (gvUsers.Rows[e.RowIndex].FindControl("txtTermNo") as TextBox).Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@Course", (gvUsers.Rows[e.RowIndex].FindControl("txtCourse") as TextBox).Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@CourseTitle", (gvUsers.Rows[e.RowIndex].FindControl("txtCourseTitle") as TextBox).Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@Units", (gvUsers.Rows[e.RowIndex].FindControl("txtUnits") as TextBox).Text.Trim());
@@ -185,114 +284,21 @@ public partial class Edit118 : System.Web.UI.Page
                 sqlCmd.ExecuteNonQuery();
                 gvUsers.EditIndex = -1;
                 PopulateGridView();
-                LBL.Text = "Record Updated";
-                PopulateGridView();
-
+               
 
             }
 
         }
         catch (Exception ex)
         {
-            LBL.Text = ex.Message;
+          
         }
     }
-
-    protected void gvUsers_RowDeleting(object sender, GridViewDeleteEventArgs e)
-    {
-        try
-        {
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                string query = "DELETE FROM FlowchartTable118 WHERE id=@id";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-
-                sqlCmd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
-                sqlCmd.ExecuteNonQuery();
-
-                PopulateGridView();
-                LBL.Text = "";
-            }
-
-        }
-
-        catch (Exception ex)
-        {
-            LBL.Text = ex.Message;
-        }
-    }
-
-    protected void BTN_View_Click(object sender, EventArgs e)
-    {
-
-
-        ddl_value = DropDownList1.SelectedValue;
-        Label1.Text = ddl_value;
-
-        PopulateGridView();
-
-    }
-
-
-
-    protected void LB_login_Click(object sender, EventArgs e)
-    {
-
-        Session.RemoveAll();
-        Response.Redirect("Login.aspx");
-    }
-
-
-    protected void LB_home_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Home.aspx");
-    }
-
-
-
-    protected void LB_db_Click(object sender, EventArgs e)
-    {
-        if (admin == 1)
-        {
-            Response.Redirect("Database.aspx");
-        }
-
-        else
-        {
-            LBL.Text = "You don't have admin privileges!";
-        }
-
-    }
-
-
-    protected void LB_a2_Click(object sender, EventArgs e)
-    {
-        if (admin == 1)
-        {
-            Response.Redirect("AdminPage1.aspx");
-        }
-
-        else
-        {
-
-            LBL.Text = "You don't have admin privileges!";
-        }
-    }
-    protected void LB_my_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("MyAccount.aspx");
-    }
-
-
-
     protected void gvUsers_SelectedIndexChanged(object sender, EventArgs e)
     {
 
     }
-    protected void BTN_Back_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("MyAccount.aspx");
-    }
+   
+
+
 }

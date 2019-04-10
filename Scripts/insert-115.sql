@@ -1,7 +1,7 @@
 
 USE [ageDB]
 
-	INSERT INTO FlowchartTable115 (TermNo, Course,CourseTitle,Units, SoftReq, CoReq, HardReq) 
+	INSERT INTO dB2015 (TermNo, Course,CourseTitle,Units, SoftReq, CoReq, HardReq) 
 	VALUES
 ('Term 1','NSTP101','National Service Training Program General-Orientation',0,null,null,null),
 ('Term 1','PERSEF1','Personal Effectiveness 1',(2),null,null,null),

@@ -1,6 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Edit118.aspx.cs" Inherits="Edit118" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddCurriculum.aspx.cs" Inherits="AddCurriculum" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -20,44 +21,9 @@
             font-family: mech;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background: url(images/blur.jpg);
-            background-size: cover;
-            background-attachment:fixed;
-            background-repeat:no-repeat;
-        }
-
-
-
-        h1 {
-            margin: 0;
-            padding: 0 0 10px;
-            text-align: center;
-            font-size: 16px;
-        }
-
-
-         .ddl
-        {
-             margin: 0;
-            padding: 0;
-            border: 1px solid WHITE;
-            background: rgba(0,0,0,0.6);
-            height: 33px;
-            width: 120px;
-            left: 0%;
-        
-            border-radius: 20px;
-            color: #fff;
-            font-size: 14px;
-            margin-left: 5px;
-            margin-top: 5px;
-        }
         .subLabel {
-            top: 20%;
-            left: 81%;
+            top: 12%;
+            left: 78%;
             width: 100%;
             position: absolute;
             transform: translate(-50%,-50%);
@@ -66,8 +32,35 @@
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            font-size: 40px;
+            font-size: 35px;
             color: white;
+        }
+
+        .ddl {
+            margin: 0;
+            padding: 0;
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0.6);
+            height: 33px;
+            width: 100%;
+            left: 0%;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 14px;
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(images/bgdark.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
 
         .buttonDane input[type="submit"] {
@@ -92,131 +85,148 @@
                 transition: .3s;
             }
 
-        .searchBox {
-            width: 15%;
-            height: 6%;
-            
-            background: rgba(0, 0, 0, 0);
-            color: #fff;
-            top: 21%;
-            left: 22%;
-            position: absolute;
-            transform: translate(-50%,-50%);
-            box-sizing: border-box;
-            
-            font-family: sans-serif;
+        h1 {
+            margin: 0;
+            padding: 0 0 10px;
+            text-align: center;
+            font-size: 16px;
         }
 
-            .searchBox input[type="text"] {
-                width: 80%;
-             
-                border: none;
-                border-width: 1px;
-                border-color: white;
-                
-                background: transparent;
-                outline: none;
-                height: 40px;
-                color: #fff;
-                font-size: 12px;
-            }
-
-
-            .searchBox input[type="submit"] {
-                margin: 0;
-            padding: 0;
-            border: 1px solid WHITE;
-             background: rgba(0,0,0,0.5);
-            height: 33px;
-            width: 68px;
-            left: 0%;
-        
-            border-radius: 20px;
-            color: #fff;
-            font-size: 14px;
-            margin-left: 5px;
-            margin-top: 5px;
-            }
-
-                .searchBox input[type="submit"]:hover {
-                    cursor: pointer;
-                    background: #39dc79;
-                    color: #000;
-                }
-
-            .searchBox a {
-                text-decoration: none;
-                font-size: 14px;
-                color: #fff;
-            }
-
-                .searchBox a:hover {
-                    color: #39dc79;
-                }
-
-
-        .gridviewBox {
-            width: 70%;
-            height: 50%;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        .createBox {
+            width: 300px;
+            height: 180px;
             background: rgba(0, 0, 0, 0.7);
             color: #fff;
-            top: 47.8%;
-            left: 50%;
+            top: 24%;
+            left: 13%;
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
-            padding: 30px 20px;
+            padding: 30px 30px;
             font-family: sans-serif;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
         }
 
 
-            .gridviewBox input[type="text"] {
-                width: 80%;
-                margin-bottom: 20px;
+
+            .createBox input[type="text"], input[type="password"] {
                 border: none;
-                border-width: 1px;
-                border-color: white;
                 border-bottom: 1px solid #fff;
                 background: transparent;
                 outline: none;
-                height: 40px;
                 color: #fff;
-                font-size: 16px;
+                font-size: 14px;
             }
 
-
-            .gridviewBox input[type="submit"] {
-                border: none;
+            .createBox input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
                 outline: none;
-                height: 40px;
-                background: #31BDC9;
+                padding: 7px 7px 7px 7px;
                 color: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 border-radius: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
 
-                .gridviewBox input[type="submit"]:hover {
+                .createBox input[type="submit"]:hover {
                     cursor: pointer;
-                    background: #39dc79;
+                    background: WHITE;
                     color: #000;
                 }
 
-            .gridviewBox a {
-                text-decoration: none;
-                font-size: 14px;
+        .viewBox {
+            width: 300px;
+            height: 180px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 44%;
+            left: 13%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 30px;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+
+
+            .viewBox input[type="text"], input[type="password"] {
+                border: none;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
                 color: #fff;
+                font-size: 14px;
             }
 
-                .gridviewBox a:hover {
-                    color: #39dc79;
+            .viewBox input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                padding: 7px 7px 7px 7px;
+                color: #fff;
+                font-size: 15px;
+                border-radius: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+                .viewBox input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
+                }
+
+        .deleteBox {
+            width: 300px;
+            height: 180px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 64%;
+            left: 13%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 30px;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+
+
+            .deleteBox input[type="text"], input[type="password"] {
+                border: none;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
+                color: #fff;
+                font-size: 14px;
+            }
+
+            .deleteBox input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                padding: 7px 7px 7px 7px;
+                color: #fff;
+                font-size: 15px;
+                border-radius: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+                .deleteBox input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
                 }
 
 
-
-
         .generalLabel {
-            top: 11%;
+            top: 71%;
             left: 50%;
             position: absolute;
             transform: translate(-50%,-50%);
@@ -227,9 +237,12 @@
             margin-right: auto;
             text-align: center;
             font-family: sans-serif;
-            font-size: 16px;
-            color: aliceblue;
+            font-size: 18px;
+            color: red;
         }
+
+
+
 
         nav {
             top: 0;
@@ -281,6 +294,63 @@
         ul li a:hover {
             color: #262626;
         }
+
+        .gridviewBox {
+            width: 68%;
+            height: 410%;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 219.8%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 20px;
+            font-family: sans-serif;
+        }
+
+
+            .gridviewBox input[type="text"] {
+                width: 80%;
+                margin-bottom: 20px;
+                border: none;
+                border-width: 1px;
+                border-color: white;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
+                height: 40px;
+                color: #fff;
+                font-size: 16px;
+            }
+
+
+            .gridviewBox input[type="submit"] {
+                border: none;
+                outline: none;
+                height: 40px;
+                background: green;
+                color: #fff;
+                font-size: 18px;
+                border-radius: 20px;
+            }
+
+                .gridviewBox input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: #39dc79;
+                    color: #000;
+                }
+
+            .gridviewBox a {
+                text-decoration: none;
+                font-size: 14px;
+                color: #fff;
+            }
+
+                .gridviewBox a:hover {
+                    color: #39dc79;
+                }
     </style>
 </head>
 <body>
@@ -296,10 +366,21 @@
                 <li><a>
                     <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click">HOME</asp:LinkButton>
                 </a></li>
+                <div class="myClass" id="myID" runat="server">
 
-                <li><a>
-                    <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
-                </a></li>
+                    <li><a>
+                        <asp:LinkButton ID="LB_my" runat="server" OnClick="LB_my_Click">MY ACCOUNT</asp:LinkButton>
+                    </a></li>
+                </div>
+
+
+                <div class="regClass" id="regID" runat="server">
+                    <li><a>
+                        <asp:LinkButton ID="LB_reg" runat="server" OnClick="LB_reg_Click" Text="REGISTER"> </asp:LinkButton>
+                    </a></li>
+                </div>
+
+
 
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
@@ -308,29 +389,19 @@
         </nav>
 
         <div class="buttonDane">
-            <asp:Button ID="BTN_Back" runat="server" Text="BACK" OnClick="BTN_Back_Click" />
-        </div>
-
-        <div class="generalLabel">
-            <asp:Label ID="LBL" runat="server" Text=" "></asp:Label>
+            <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" /><br />
+            <br />
         </div>
 
         <div class="subLabel">
 
-            <asp:Label ID="Label1" runat="server" Text="TERM No."></asp:Label>
+            <asp:Label ID="titleLbl" runat="server" Text=" "></asp:Label>
 
 
         </div>
-           
-        <div class="searchBox">
-
-              <asp:Button ID="Button1" runat="server" Text="View" OnClick="BTN_View_Click" />
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TermNo" DataValueField="TermNo" AutoPostBack="True" CssClass="ddl">
-            </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [TermNo] FROM [FlowchartTable118] ORDER BY [TermNo]"></asp:SqlDataSource>
-           
-        </div>
+      
         <div class="gridviewBox">
+
 
             <asp:GridView ID="gvUsers" runat="server" CellPadding="4" ForeColor="Black" GridLines="None" AutoGenerateColumns="false"
                 ShowFooter="true"
@@ -367,7 +438,7 @@
                             <asp:TextBox ID="txtTermNo" Text='<%# Eval("TermNo") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-                         
+                              <asp:TextBox ID="txtTermNoFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
 
@@ -464,9 +535,8 @@
                 </Columns>
             </asp:GridView>
 
-
-
         </div>
+
     </form>
 </body>
 </html>

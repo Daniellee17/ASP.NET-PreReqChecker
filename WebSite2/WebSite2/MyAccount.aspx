@@ -28,25 +28,154 @@
             background-size: cover;
         }
 
-         .ddl
-        {
-             margin: 0;
-            padding: 0;
-            border: 1px solid WHITE;
-            background: rgba(0,0,0,0.6);
-            height: 33px;
-            width: 100%;
-            left: 0%;
-        
-            border-radius: 20px;
+        .createBox {
+            width: 300px;
+            height: 180px;
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
-            font-size: 14px;
-            margin-left: 5px;
-            margin-top: 5px;
-            margin-bottom:10px;
+            top: 24%;
+            left: 13%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 30px;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
         }
 
-          .admin0-box {
+
+
+            .createBox input[type="text"], input[type="password"] {
+                border: none;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
+                color: #fff;
+                font-size: 14px;
+            }
+
+            .createBox input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                padding: 7px 7px 7px 7px;
+                color: #fff;
+                font-size: 15px;
+                border-radius: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+                .createBox input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
+                }
+
+        .viewBox {
+            width: 300px;
+            height: 180px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 44%;
+            left: 13%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 30px;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+
+
+            .viewBox input[type="text"], input[type="password"] {
+                border: none;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
+                color: #fff;
+                font-size: 14px;
+            }
+
+            .viewBox input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                padding: 7px 7px 7px 7px;
+                color: #fff;
+                font-size: 15px;
+                border-radius: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+                .viewBox input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
+                }
+
+        .deleteBox {
+            width: 300px;
+            height: 180px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 64%;
+            left: 13%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 30px 30px;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+
+
+            .deleteBox input[type="text"], input[type="password"] {
+                border: none;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
+                color: #fff;
+                font-size: 14px;
+            }
+
+            .deleteBox input[type="submit"] {
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0);
+                outline: none;
+                padding: 7px 7px 7px 7px;
+                color: #fff;
+                font-size: 15px;
+                border-radius: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+                .deleteBox input[type="submit"]:hover {
+                    cursor: pointer;
+                    background: WHITE;
+                    color: #000;
+                }
+
+        .ddl {
+            margin: 0;
+            padding: 0;
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0.5);
+            height: 40px;
+            width: 100%;
+            left: 0%;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 17px;
+        
+            margin-bottom: 10px;
+        }
+
+        .admin0-box {
             width: 300px;
             height: 200px;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -69,7 +198,7 @@
                 margin-bottom: 20px;
             }
 
-                 
+
 
             .admin0-box input[type="submit"] {
                 border: 1px solid WHITE;
@@ -132,7 +261,7 @@
 
         .admin2-box {
             width: 300px;
-            height: 200px;
+            height: 220px;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             background: rgba(0, 0, 0, 0.7);
             color: #fff;
@@ -153,16 +282,25 @@
                 margin-bottom: 20px;
             }
 
+            .admin2-box input[type="text"], input[type="password"] {
+                border: none;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
+                color: #fff;
+                font-size: 14px;
+               
+            }
+
             .admin2-box input[type="submit"] {
                 border: 1px solid WHITE;
                 background: rgba(0,0,0,0);
                 outline: none;
-                width: 49%;
-                height: 40px;
                 color: #fff;
                 font-size: 16px;
-                border-radius: 16px;
-                margin-bottom: 10px;
+                border-radius: 20px;
+                padding: 10px 10px 10px 10px;
+                 margin-bottom:10px;
             }
 
                 .admin2-box input[type="submit"]:hover {
@@ -186,14 +324,7 @@
             font-family: sans-serif;
         }
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            position: absolute;
-            top: -50px;
-            left: calc(50% - 50px);
-        }
+
 
         h1 {
             margin: 0;
@@ -366,13 +497,15 @@
 
 
 
+
+
         <asp:HiddenField ID="hfUserID" runat="server" />
 
-             <div class="admin0-box" id="Div1" runat="server">
+        <div class="admin0-box" id="Div1" runat="server">
             <h1>STUDENT DATABASE</h1>
-                  <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="IDNumber" DataValueField="IDNumber" AutoPostBack="True" CssClass="ddl">
+            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Year" DataValueField="Year" AutoPostBack="True" CssClass="ddl">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [IDNumber] FROM [FinalTable] ORDER BY [IDNumber]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT [Year] FROM [yearTbl] ORDER BY [Year]"></asp:SqlDataSource>
             <asp:Button ID="BTNstudent" runat="server" Text="View" Font-Bold="false" OnClick="BTNStudent_Click" />
 
         </div>
@@ -384,11 +517,18 @@
         </div>
 
         <div class="admin2-box" id="admin2" runat="server">
-            <h1>COURSES DATABASE</h1>
-            <asp:Button ID="BTNcoursesDB" runat="server" Text="Edit 115" Font-Bold="false" OnClick="BTNcoursesDB_Click" />
-            <asp:Button ID="BTNcoursesDB118" runat="server" Text="Edit 118" Font-Bold="false" OnClick="BTNEdit118_Click" />
-            <asp:Button ID="BTNcoursesDBAdd" runat="server" Text="Add 115" Font-Bold="false" OnClick="BTNAdd115_Click" />
-            <asp:Button ID="BTNcoursesDBAdd118" runat="server" Text="Add 118" Font-Bold="false" OnClick="BTNAdd118_Click" />
+            <h1>CURRICULUM DATABASE</h1>
+                        <asp:TextBox ID="yearTb" runat="server" placeholder="Year" Width="68%"></asp:TextBox>
+            <asp:Button ID="BTN_Add" runat="server" Text="Add" OnClick="BTN_Add_Click" Width="30%" />
+            <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" CssClass="ddl" Width="98%" DataSourceID="SqlDataSource2" DataTextField="Year" DataValueField="Year">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [Year] FROM [yearTbl] ORDER BY [Year]"></asp:SqlDataSource>
+            <asp:Button ID="BTN_View" runat="server" Text="View" OnClick="BTN_View_Click" Width="48%" />
+            <asp:Button ID="BTN_Delete" runat="server" Text="Delete" OnClick="BTN_Delete_Click" Width="48%" />
+
+
+            <asp:Label ID="statusLbl" runat="server" Text="" Style="font-size: 13px"></asp:Label>
+
         </div>
 
         <div class="login-box">
