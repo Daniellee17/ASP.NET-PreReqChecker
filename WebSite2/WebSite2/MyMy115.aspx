@@ -25,10 +25,67 @@
             padding: 0;
             background: url(images/blur.jpg);
             background-size: cover;
-            background-attachment:fixed;
-            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
 
+         .contactBox {
+             width: 70%;
+            height: 6%;
+            background: rgba(0, 0, 0, 0);
+            color: #fff;
+            top: 21%;
+            left: 60%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .contactBox input[type="text"], input[type="password"] {
+            margin: 0;
+            padding: 0;
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0.5);
+            height: 33px;
+            width: 68px;
+            left: 0%;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 14px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        .contactBox input[type="submit"] {
+            margin: 0;
+            padding: 0;
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0.5);
+            height: 33px;
+            width: 68px;
+            left: 0%;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 14px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+            .contactBox input[type="submit"]:hover {
+                cursor: pointer;
+                background: WHITE;
+                color: #000;
+            }
+
+        .contactBox a {
+            text-decoration: none;
+            font-size: 15px;
+            color: #fff;
+        }
+
+            .contactBox a:hover {
+                color: #39dc79;
+            }
 
 
         h1 {
@@ -39,22 +96,21 @@
         }
 
 
-         .ddl
-        {
-             margin: 0;
+        .ddl {
+            margin: 0;
             padding: 0;
             border: 1px solid WHITE;
             background: rgba(0,0,0,0.6);
             height: 33px;
             width: 120px;
             left: 0%;
-        
             border-radius: 20px;
             color: #fff;
             font-size: 14px;
             margin-left: 5px;
             margin-top: 5px;
         }
+
         .subLabel {
             top: 20%;
             left: 81%;
@@ -95,7 +151,6 @@
         .searchBox {
             width: 15%;
             height: 6%;
-            
             background: rgba(0, 0, 0, 0);
             color: #fff;
             top: 21%;
@@ -103,17 +158,14 @@
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
-            
             font-family: sans-serif;
         }
 
             .searchBox input[type="text"] {
                 width: 80%;
-             
                 border: none;
                 border-width: 1px;
                 border-color: white;
-                
                 background: transparent;
                 outline: none;
                 height: 40px;
@@ -124,18 +176,17 @@
 
             .searchBox input[type="submit"] {
                 margin: 0;
-            padding: 0;
-            border: 1px solid WHITE;
-             background: rgba(0,0,0,0.5);
-            height: 33px;
-            width: 68px;
-            left: 0%;
-        
-            border-radius: 20px;
-            color: #fff;
-            font-size: 14px;
-            margin-left: 5px;
-            margin-top: 5px;
+                padding: 0;
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0.5);
+                height: 33px;
+                width: 68px;
+                left: 0%;
+                border-radius: 20px;
+                color: #fff;
+                font-size: 14px;
+                margin-left: 5px;
+                margin-top: 5px;
             }
 
                 .searchBox input[type="submit"]:hover {
@@ -321,14 +372,14 @@
 
 
         </div>
-           
+
         <div class="searchBox">
 
-              <asp:Button ID="Button1" runat="server" Text="View" OnClick="BTN_View_Click" />
+            <asp:Button ID="Button1" runat="server" Text="View" OnClick="BTN_View_Click" />
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TermNo" DataValueField="TermNo" AutoPostBack="True" CssClass="ddl">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [TermNo] FROM [FlowchartTable115] ORDER BY [TermNo]"></asp:SqlDataSource>
-           
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [TermNo] FROM [dB2015] ORDER BY [TermNo]"></asp:SqlDataSource>
+
         </div>
         <div class="gridviewBox">
 
@@ -336,8 +387,6 @@
                 ShowFooter="true"
                 DataKeyNames="id"
                 ShowHeaderWhenEmpty="true"
-              
-           
                 Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 40px; font-size: 15px; position: center"
                 OnSelectedIndexChanged="gvUsers_SelectedIndexChanged">
 
@@ -363,7 +412,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtTermNo" Text='<%# Eval("TermNo") %>' runat="server" />
                         </EditItemTemplate>
-                      
+
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="COURSE">
@@ -373,7 +422,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtCourse" Text='<%# Eval("Course") %>' runat="server" />
                         </EditItemTemplate>
-                       
+
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="COURSE TITLE">
@@ -383,10 +432,10 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtCourseTitle" Text='<%# Eval("CourseTitle") %>' runat="server" />
                         </EditItemTemplate>
-                     
+
                     </asp:TemplateField>
 
-                    
+
                     <asp:TemplateField HeaderText="PASSED">
                         <ItemTemplate>
                             <asp:Label Text='<%# Eval("Passed") %>' runat="server" />
@@ -394,7 +443,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtPassed" Text='<%# Eval("Passed") %>' runat="server" />
                         </EditItemTemplate>
-                       
+
                     </asp:TemplateField>
 
 
@@ -405,7 +454,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtUnits" Text='<%# Eval("Units") %>' runat="server" />
                         </EditItemTemplate>
-                      
+
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="SOFT">
@@ -415,7 +464,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtSoft" Text='<%# Eval("SoftReq") %>' runat="server" />
                         </EditItemTemplate>
-                      
+
                     </asp:TemplateField>
 
 
@@ -426,7 +475,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtCo" Text='<%# Eval("CoReq") %>' runat="server" />
                         </EditItemTemplate>
-                        
+
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="HARD">
@@ -436,7 +485,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txtHard" Text='<%# Eval("HardReq") %>' runat="server" />
                         </EditItemTemplate>
-                       
+
                     </asp:TemplateField>
 
 
@@ -445,6 +494,17 @@
                 </Columns>
             </asp:GridView>
 
+
+
+        </div>
+
+        <div class="contactBox">
+
+
+            <asp:TextBox ID="TB1" runat="server" placeholder="Course Code" Width="12%"></asp:TextBox>
+            <asp:Button ID="BTN_Search" runat="server" Text="Search" OnClick="BTN_Search_Click" />
+
+            <asp:Label ID="LBL_PreReq" runat="server" Text=""></asp:Label>
 
 
         </div>

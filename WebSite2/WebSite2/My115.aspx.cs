@@ -14,7 +14,7 @@ public partial class My115 : System.Web.UI.Page
     int admin = 0;
     int loggedin = 0;
     string ddl_value;
-  
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -69,7 +69,7 @@ public partial class My115 : System.Web.UI.Page
             {
                 sqlCon.Open();
                 string a = DropDownList1.SelectedValue;
-               string query = "SELECT * FROM dB" + Session["StudentChosen"].ToString() + " WHERE TermNo=@TermNo";
+                string query = "SELECT * FROM dB" + Session["StudentChosen"].ToString() + " WHERE TermNo=@TermNo";
                 SqlDataAdapter sqlDa = new SqlDataAdapter(query, sqlCon);
 
                 sqlDa.SelectCommand.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
@@ -125,7 +125,7 @@ public partial class My115 : System.Web.UI.Page
                 {
                     sqlCon.Open();
                     string query = "INSERT INTO  dB" + Session["StudentChosen"].ToString() + "(TermNo,Course,CourseTitle,Passed,Units,SoftReq,CoReq,HardReq) VALUES (@TermNo,@Course,@CourseTitle,@Passed,@Units,@SoftReq,@CoReq,@HardReq)";
-                
+
                     SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
                     sqlCmd.Parameters.AddWithValue("@TermNo", DropDownList1.SelectedValue);
                     sqlCmd.Parameters.AddWithValue("@Course", (gvUsers.FooterRow.FindControl("txtCourseFooter") as TextBox).Text.Trim());
@@ -175,7 +175,7 @@ public partial class My115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-               
+
                 string query = "UPDATE dB" + Session["StudentChosen"].ToString() + " SET Course=@Course,CourseTitle=@CourseTitle,Passed=@Passed,Units=@Units,SoftReq=@SoftReq,CoReq=@CoReq,HardReq=@HardReq WHERE id=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
@@ -211,8 +211,8 @@ public partial class My115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-              
-                string query = "DELETE FROM dB" + Session["StudentChosen"].ToString()+" WHERE id=@id";
+
+                string query = "DELETE FROM dB" + Session["StudentChosen"].ToString() + " WHERE id=@id";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
                 sqlCmd.Parameters.AddWithValue("@id", Convert.ToInt32(gvUsers.DataKeys[e.RowIndex].Value.ToString()));
@@ -238,7 +238,7 @@ public partial class My115 : System.Web.UI.Page
         PopulateGridView();
         Label1.Text = ddl_value;
 
-    
+
 
     }
 

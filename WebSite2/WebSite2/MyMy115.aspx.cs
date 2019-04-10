@@ -114,8 +114,44 @@ public partial class MyMy115 : System.Web.UI.Page
 
 
 
-    
- 
+    protected void BTN_Search_Click(object sender, EventArgs e)
+    {
+
+        using (SqlConnection sqlCon1 = new SqlConnection(connectionString))
+        {
+            sqlCon1.Open();
+
+            string query = "SELECT HardReq FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@Course";
+            string query2 = "SELECT COUNT(1) FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@HardReq AND Passed='1'";
+
+            ////////// CHECK HARD REQ ////////////////
+            SqlCommand b = new SqlCommand(query, sqlCon1);
+            b.Parameters.AddWithValue("@Course", TB1.Text.Trim());
+            object valueb = b.ExecuteScalar();
+
+            if (valueb != null)
+                LBL_PreReq.Text = "HardReq: " + valueb.ToString();
+            else
+                LBL_PreReq.Text = "HardReq: None";
+
+
+            ////////// CHECK IF PASSED HARD REQ ////////////////
+            SqlCommand bb = new SqlCommand(query2, sqlCon1);
+            bb.Parameters.AddWithValue("@HardReq", valueb.ToString());
+            int count = Convert.ToInt32(bb.ExecuteScalar());
+            if (count == 1)
+            {
+
+                LBL_PreReq.Text = "You passed: " + valueb.ToString();
+            }
+            else
+                LBL_PreReq.Text = "You havent taken/failed: " + valueb.ToString();
+
+
+        }
+
+    }
+
     protected void BTN_View_Click(object sender, EventArgs e)
     {
 

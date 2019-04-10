@@ -235,7 +235,7 @@
                 
                 <asp:Button ID="BTN_User" runat="server" Text="My Flowchart" OnClick="BTN_User_Click" Style="top: 67%; width: 205px; left: 51%;" />
              
-                     <asp:Button ID="BTN_Checker" runat="server" Text="Checker" OnClick="BTN_Checker_Click" Style="top: 67%; width: 205px; left: 40%;" />
+              
             </div>
 
             <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 67%; width: 205px; left: 62%;" />

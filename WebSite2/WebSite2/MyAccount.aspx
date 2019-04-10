@@ -283,12 +283,16 @@
             }
 
             .admin2-box input[type="text"], input[type="password"] {
-                border: none;
-                border-bottom: 1px solid #fff;
-                background: transparent;
-                outline: none;
+     
+                border: 1px solid WHITE;
+                background: rgba(0,0,0,0.5);
+                height: 40px;
+              
+        
+                border-radius: 20px;
                 color: #fff;
                 font-size: 14px;
+       margin-bottom:10px;
                
             }
 
@@ -503,9 +507,9 @@
 
         <div class="admin0-box" id="Div1" runat="server">
             <h1>STUDENT DATABASE</h1>
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Year" DataValueField="Year" AutoPostBack="True" CssClass="ddl">
+            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="IDNumber" DataValueField="IDNumber" AutoPostBack="True" CssClass="ddl">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT [Year] FROM [yearTbl] ORDER BY [Year]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [IDNumber] FROM [FinalTable] ORDER BY [IDNumber]"></asp:SqlDataSource>
             <asp:Button ID="BTNstudent" runat="server" Text="View" Font-Bold="false" OnClick="BTNStudent_Click" />
 
         </div>
@@ -518,7 +522,7 @@
 
         <div class="admin2-box" id="admin2" runat="server">
             <h1>CURRICULUM DATABASE</h1>
-                        <asp:TextBox ID="yearTb" runat="server" placeholder="Year" Width="68%"></asp:TextBox>
+                        <asp:TextBox ID="yearTb" runat="server" placeholder="Year" Width="65%"></asp:TextBox>
             <asp:Button ID="BTN_Add" runat="server" Text="Add" OnClick="BTN_Add_Click" Width="30%" />
             <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" CssClass="ddl" Width="98%" DataSourceID="SqlDataSource2" DataTextField="Year" DataValueField="Year">
             </asp:DropDownList>
@@ -574,17 +578,6 @@
 
 
 
-            <asp:Button ID="BTNreset" runat="server" Text="Reset Password" OnClientClick=" JSalert();" OnClick="BTNreset_Click" />
-
-
-
-            <script type="text/javascript">
-                function JSalert() {
-                    alert("You've reset your password!" + "\r\n" + "\r\n" + "Please log out to enter your new password");
-                }
-            </script>
-
-            <asp:Button ID="BTNchange" runat="server" Text="Change Password" OnClick="BTNchange_Click" />
 
             <asp:TextBox ID="Tb1" runat="server" Text="" Visible="false" />
         </div>
