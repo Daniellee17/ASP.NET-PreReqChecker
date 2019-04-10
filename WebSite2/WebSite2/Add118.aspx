@@ -25,6 +25,8 @@
             padding: 0;
             background: url(images/bgdark.jpg);
             background-size: cover;
+            background-attachment:fixed;
+            background-repeat:no-repeat;
         }
 
 

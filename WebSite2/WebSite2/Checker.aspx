@@ -26,6 +26,8 @@
             padding: 0;
             background: url(images/blur.jpg);
             background-size: cover;
+            background-attachment:fixed;
+            background-repeat:no-repeat;
         }
 
 
@@ -46,7 +48,7 @@
             position: absolute;
             transform: translate(-50%,-50%);
             box-sizing: border-box;
-            padding: 70px 30px;
+            padding: 30px 30px;
             font-family: sans-serif;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
         }
@@ -217,7 +219,7 @@
 
 
         <div class="contactBox">
-            <h1>CONTACT US</h1>
+            <h1>Checker</h1>
 
             <asp:TextBox ID="TB1" runat="server" placeholder="Course Code" Width="49%"></asp:TextBox>
                         <asp:Button ID="BTN_Search" runat="server" Text="Search" OnClick="BTN_Search_Click" />
