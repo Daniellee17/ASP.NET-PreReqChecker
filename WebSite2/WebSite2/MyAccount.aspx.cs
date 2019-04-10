@@ -35,6 +35,7 @@ public partial class MyAccount : System.Web.UI.Page
                 admin = 0;
                 admin1.Visible = false;
                 admin2.Visible = false;
+                Div1.Visible = false;
                 LblName.Text = "Welcome, " + Session["FirstName"] + "!";
 
 

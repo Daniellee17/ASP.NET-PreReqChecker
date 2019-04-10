@@ -4,12 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
 
-public partial class Home : System.Web.UI.Page
+public partial class Checker : System.Web.UI.Page
 {
     int admin = 0;
     int guest = 0;
     int loggedin = 0;
+    string connectionString = @"Data Source=MSI-DANE;Initial Catalog=ageDB;Integrated Security=True;";
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,13 +27,11 @@ public partial class Home : System.Web.UI.Page
 
             if (Session["Type"] == "Administrator")
             {
-                hideUserID.Visible = false;
                 admin = 1;
                 LblName.Text = "Welcome, " + " Admin " + Session["FirstName"] + "!";
             }
             else
             {
-                hideID.Visible = false;
                 admin = 0;
                 LblName.Text = "Welcome, " + Session["FirstName"] + "!";
 
@@ -41,12 +42,50 @@ public partial class Home : System.Web.UI.Page
 
         else
         {
-            hideUserID.Visible = false;
             myID.Visible = false;
             guest = 1;
             LblName.Text = "Welcome, Guest!";
             LB_login.Text = "Login";
         }
+    }
+
+
+    protected void BTN_Search_Click(object sender, EventArgs e)
+    {
+
+        using (SqlConnection sqlCon1 = new SqlConnection(connectionString))
+        {
+            sqlCon1.Open();
+
+            string query = "SELECT HardReq FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@Course";
+            string query2 = "SELECT COUNT(1) FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@HardReq AND Passed='1'";
+
+            ////////// CHECK HARD REQ ////////////////
+            SqlCommand b = new SqlCommand(query, sqlCon1);
+            b.Parameters.AddWithValue("@Course", TB1.Text.Trim());
+            object valueb = b.ExecuteScalar();
+
+            if (valueb != null)
+                LBL_PreReq.Text = "HardReq: " + valueb.ToString();
+            else
+                LBL_PreReq.Text = "HardReq: None";
+
+
+            ////////// CHECK IF PASSED HARD REQ ////////////////
+            SqlCommand bb = new SqlCommand(query2, sqlCon1);
+            bb.Parameters.AddWithValue("@HardReq", valueb.ToString());
+            int count = Convert.ToInt32(bb.ExecuteScalar());
+            if (count == 1)
+            {
+
+                LBL_PreReq.Text = "You passed: " + valueb.ToString();
+            }
+            else
+                LBL_PreReq.Text = "You havent taken/failed: " + valueb.ToString();
+
+
+        }
+
     }
 
 
@@ -88,6 +127,11 @@ public partial class Home : System.Web.UI.Page
         Response.Redirect("Home.aspx");
     }
 
+    protected void LB_contact_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Contact.aspx");
+    }
+
 
 
     protected void LB_db_Click(object sender, EventArgs e)
@@ -105,12 +149,6 @@ public partial class Home : System.Web.UI.Page
 
     }
 
-    protected void LB_contact_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Contact.aspx");
-    }
-
-
 
     protected void LB_a2_Click(object sender, EventArgs e)
     {
@@ -126,61 +164,12 @@ public partial class Home : System.Web.UI.Page
         }
     }
 
-    protected void BTN_118_Click(object sender, EventArgs e)
+    protected void BTN_Back_Click(object sender, EventArgs e)
     {
 
-        
-            Response.Redirect("Courses.aspx");
-        
-
-
-
-
-
+        Response.Redirect("Home.aspx");
 
     }
 
-
-    protected void BTN_115_Click(object sender, EventArgs e)
-    {
-
-        Response.Redirect("Courses115.aspx");
-
-
-
-
-
-    }
-
-    protected void BTN_User_Click(object sender, EventArgs e)
-    {
-
-        Response.Redirect("MyMy115.aspx");
-
-
-
-
-
-    }
-
-    protected void BTN_Checker_Click(object sender, EventArgs e)
-    {
-
-        Response.Redirect("Checker.aspx");
-
-
-
-
-
-    }
-
-    protected void BTN_ContactUs_Click(object sender, EventArgs e)
-    {
-
-        Response.Redirect("Contact.aspx");
-
-
-
-    }
 
 }

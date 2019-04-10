@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Checker.aspx.cs" Inherits="Checker" %>
 
 <!DOCTYPE html>
 
@@ -28,34 +28,85 @@
             background-size: cover;
         }
 
-        .buttons input[type="submit"] {
-            border: 1px solid WHITE;
-            background: rgba(0,0,0,0);
-            top: 66%;
-            position: absolute;
-            left: 50%;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-            color: #fff;
-            font-size: 27px;
-            display: inherit inline;
-            transform: translate(-50%,-50%);
-            box-sizing: border-box;
-            padding: 15px 25px;
-            margin-left: auto;
-            margin-right: auto;
+
+        h1 {
+            margin: 0;
+            padding: 0 0 10px;
             text-align: center;
-            font-family: banger;
+            font-size: 16px;
         }
 
-            .buttons input[type="submit"]:hover {
-                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-                border: 1px solid WHITE;
+        .contactBox {
+            width: 510px;
+            height: 360px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: -70px;
+            left: calc(50% - 50px);
+        }
+
+
+
+        .contactBox p {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #31BDC9;
+        }
+
+
+        .contactBox input[type="text"], input[type="password"] {
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            color: #fff;
+            font-size: 10px;
+        }
+
+        .contactBox input[type="submit"] {
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0);
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20px;
+            width: 80px;
+            margin-top: 20px;
+        }
+
+            .contactBox input[type="submit"]:hover {
                 cursor: pointer;
-                background: white;
+                background: WHITE;
                 color: #000;
             }
 
+        .contactBox a {
+            text-decoration: none;
+            font-size: 10px;
+            color: #fff;
         }
+
+            .contactBox a:hover {
+                color: #39dc79;
+            }
+
+
 
         .generalLabel {
             top: 71%;
@@ -64,6 +115,7 @@
             transform: translate(-50%,-50%);
             box-sizing: border-box;
             padding: 70px 30px;
+            font-family: sans-serif;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -72,38 +124,8 @@
             color: red;
         }
 
-        .mainLabel {
-            top: 44%;
-            left: 50%;
-            width: 100%;
-            position: absolute;
-            display: inherit inline;
-            transform: translate(-50%,-50%);
-            box-sizing: border-box;
-            padding: 70px 30px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            font-family: banger;
-            font-size: 150px;
-            color: white;
-        }
 
-        .subLabel {
-            top: 56%;
-            left: 50%;
-            width: 100%;
-            position: absolute;
-            transform: translate(-50%,-50%);
-            box-sizing: border-box;
-            padding: 70px 30px;
-            font-family: mech;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            font-size: 60px;
-            color: white;
-        }
+
 
         nav {
             top: 0;
@@ -163,12 +185,12 @@
         <nav>
             <div class="brand">
                 <h2>
-                    <asp:Label ID="LblName" runat="server" Text=" " Font-Bold="false"></asp:Label>
+                    <asp:Label ID="LblName" runat="server" Text=" " ForeColor="White" Font-Bold="false"></asp:Label>
                 </h2>
             </div>
             <ul>
                 <li><a>
-                    <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click" Style="color: #75E86B">HOME</asp:LinkButton>
+                    <asp:LinkButton ID="LB_home" runat="server" OnClick="LB_home_Click">HOME</asp:LinkButton>
                 </a></li>
                 <div class="myClass" id="myID" runat="server">
 
@@ -186,8 +208,6 @@
 
 
 
-
-
                 <li><a>
                     <asp:LinkButton ID="LB_login" runat="server" OnClick="LB_login_Click" Text="Login"></asp:LinkButton>
                 </a></li>
@@ -196,58 +216,24 @@
 
 
 
+        <div class="contactBox">
+            <h1>CONTACT US</h1>
 
+            <asp:TextBox ID="TB1" runat="server" placeholder="Course Code" Width="49%"></asp:TextBox>
+                        <asp:Button ID="BTN_Search" runat="server" Text="Search" OnClick="BTN_Search_Click" />
+            <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" /><br /><br />
+              <asp:Label ID="LBL_PreReq" runat="server" Text="PreReq"></asp:Label>
+
+
+        </div>
 
         <div class="generalLabel">
 
             <asp:Label ID="LBLerror" runat="server" Text=""></asp:Label>
 
-        </div>
-
-        <div class="mainLabel">
-
-            <asp:Label ID="Label1" runat="server" Text="MECHANICAL ENGINEERING"></asp:Label>
-
 
 
         </div>
-
-        <div class="subLabel">
-
-            <asp:Label ID="Label4" runat="server" Text="Pre-requisite Checker"></asp:Label>
-
-
-        </div>
-
-        <div class="buttons">
-            <div class="hide" id="hideID" runat="server">
-
-                <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" Style="top: 67%; left: 51%;" />
-                <br />
-                <br />
-                <asp:Button ID="BTN_115" runat="server" Text="ID 117 and Below" OnClick="BTN_115_Click" Style="top: 67%; left: 40%;" />
-                <br />
-                <br />
-            </div>
-
-               <div class="hideUser" id="hideUserID" runat="server">
-
-                
-                <asp:Button ID="BTN_User" runat="server" Text="My Flowchart" OnClick="BTN_User_Click" Style="top: 67%; width: 205px; left: 51%;" />
-             
-                     <asp:Button ID="BTN_Checker" runat="server" Text="Checker" OnClick="BTN_Checker_Click" Style="top: 67%; width: 205px; left: 40%;" />
-            </div>
-
-            <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 67%; width: 205px; left: 62%;" />
-
-        </div>
-
-
-
-
-
-
-
     </form>
 </body>
 </html>
