@@ -15,8 +15,8 @@ public partial class MyMy115 : System.Web.UI.Page
     int loggedin = 0;
     string ddl_value;
     string temp;
-
-    string temp1; string before;
+    int counter = 0;
+    string temp1,temp2; string before;
 
 
     protected void Page_Load(object sender, EventArgs e)
@@ -146,22 +146,37 @@ public partial class MyMy115 : System.Web.UI.Page
                     bb.Parameters.AddWithValue("@HardReq", valueb.ToString());
                     int count = Convert.ToInt32(bb.ExecuteScalar());
                     temp = " AND HardReq != '" + valueb.ToString() + "'";
-                 
+                    temp1 = " " + valueb.ToString();
                     if (count > 0)
                     {
-                        temp1 = " and " + valueb.ToString();
-                        LBL_PreReq.Text = "You passed: " + before + temp1;
+
+                        temp2 = " " + valueb.ToString();
+                        if (counter == 0)
+                        {
+                            LBL_PreReq.Text = "You passed: " + before + temp2;
+                        }
+
+                        else
+                            LBL_PreReq.Text = "You passed: " + temp2;
+
                     }
                     else
                     {
+                        counter++;
                         LBL_PreReq.Text = "You havent taken/failed: " + valueb.ToString();
-                        break;
+                
                     }
-                       
-                    
 
-                   
-                  
+                    if (counter == 2)
+                    {
+                        LBL_PreReq.Text = "You havent taken/failed: " + before + temp1;
+
+                    }
+
+
+
+
+
                 }
                
             }
