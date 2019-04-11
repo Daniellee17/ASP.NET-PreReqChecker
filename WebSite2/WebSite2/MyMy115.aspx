@@ -387,13 +387,13 @@
                 ShowFooter="true"
                 DataKeyNames="id"
                 ShowHeaderWhenEmpty="true"
-                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 40px; font-size: 15px; position: center"
+                Style="font-family: sans-serif; text-align: center; margin: auto; background: transparent; outline: none; height: 40px; font-size: 21px; position: center"
                 OnSelectedIndexChanged="gvUsers_SelectedIndexChanged">
 
                 <AlternatingRowStyle BackColor="Transparent" ForeColor="White" />
                 <EditRowStyle BackColor="Transparent" ForeColor="White" />
                 <FooterStyle BackColor="Transparent" ForeColor="White" />
-                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9" />
+                <HeaderStyle BackColor="Transparent" ForeColor="#31BDC9"/>
                 <PagerStyle BackColor="Transparent" ForeColor="White" HorizontalAlign="Center" />
                 <RowStyle BackColor="Transparent" ForeColor="white" />
                 <SelectedRowStyle BackColor="Transparent" Font-Bold="True" ForeColor="white" />
@@ -505,6 +505,7 @@
             <asp:Button ID="BTN_Search" runat="server" Text="Search" OnClick="BTN_Search_Click" />
 
             <asp:Label ID="LBL_PreReq" runat="server" Text=""></asp:Label>
+             <asp:Label ID="LBL_Temp" runat="server" Text=""></asp:Label>
 
 
         </div>

@@ -14,6 +14,9 @@ public partial class MyMy115 : System.Web.UI.Page
     int admin = 0;
     int loggedin = 0;
     string ddl_value;
+    string temp;
+
+    string temp1; string before;
 
 
     protected void Page_Load(object sender, EventArgs e)
@@ -49,11 +52,7 @@ public partial class MyMy115 : System.Web.UI.Page
             LB_login.Text = "Login";
         }
 
-        if (!IsPostBack)
-        {
 
-            PopulateGridView();
-        }
     }
 
     void PopulateGridView()
@@ -120,32 +119,56 @@ public partial class MyMy115 : System.Web.UI.Page
         using (SqlConnection sqlCon1 = new SqlConnection(connectionString))
         {
             sqlCon1.Open();
-
-            string query = "SELECT HardReq FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@Course";
+            string query0 = "SELECT COUNT(1) FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@Course AND HardReq IS NOT NULL;";
+         
             string query2 = "SELECT COUNT(1) FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@HardReq AND Passed='1'";
 
-            ////////// CHECK HARD REQ ////////////////
-            SqlCommand b = new SqlCommand(query, sqlCon1);
-            b.Parameters.AddWithValue("@Course", TB1.Text.Trim());
-            object valueb = b.ExecuteScalar();
-
-            if (valueb != null)
-                LBL_PreReq.Text = "HardReq: " + valueb.ToString();
-            else
-                LBL_PreReq.Text = "HardReq: None";
-
-
-            ////////// CHECK IF PASSED HARD REQ ////////////////
-            SqlCommand bb = new SqlCommand(query2, sqlCon1);
-            bb.Parameters.AddWithValue("@HardReq", valueb.ToString());
-            int count = Convert.ToInt32(bb.ExecuteScalar());
-            if (count == 1)
+            ////////// CHECK ILAN HARD REQ ////////////////
+            SqlCommand a = new SqlCommand(query0, sqlCon1);
+            a.Parameters.AddWithValue("@Course", TB1.Text.Trim());
+            int count0 = Convert.ToInt32(a.ExecuteScalar());
+            if (count0 > 0)
             {
+                for (int i =1; i<=count0; i++)
+                {
+                    string query = "SELECT HardReq FROM dB" + Session["IDNumber"].ToString() + " WHERE Course=@Course" + temp;
+                    ////////// CHECK HARD REQ ////////////////
+                    SqlCommand b = new SqlCommand(query, sqlCon1);
+                    b.Parameters.AddWithValue("@Course", TB1.Text.Trim());
+                    object valueb = b.ExecuteScalar();
+                    if(i==1)
+                    {
+                        before = valueb.ToString();
+                    }
+                  
+                    ////////// CHECK IF PASSED HARD REQ ////////////////
+                    SqlCommand bb = new SqlCommand(query2, sqlCon1);
+                    bb.Parameters.AddWithValue("@HardReq", valueb.ToString());
+                    int count = Convert.ToInt32(bb.ExecuteScalar());
+                    temp = " AND HardReq != '" + valueb.ToString() + "'";
+                 
+                    if (count > 0)
+                    {
+                        temp1 = " and " + valueb.ToString();
+                        LBL_PreReq.Text = "You passed: " + before + temp1;
+                    }
+                    else
+                    {
+                        LBL_PreReq.Text = "You havent taken/failed: " + valueb.ToString();
+                        break;
+                    }
+                       
+                    
 
-                LBL_PreReq.Text = "You passed: " + valueb.ToString();
+                   
+                  
+                }
+               
             }
             else
-                LBL_PreReq.Text = "You havent taken/failed: " + valueb.ToString();
+                LBL_PreReq.Text = "None";
+
+           
 
 
         }
