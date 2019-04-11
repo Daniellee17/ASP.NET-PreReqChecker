@@ -157,7 +157,7 @@ public partial class MyMy115 : System.Web.UI.Page
                         }
 
                         else
-                            LBL_PreReq.Text = "You passed: " + temp2;
+                            LBL_PreReq.Text = "You passed: " + temp2 + " but failed: " + before;
 
                     }
                     else
