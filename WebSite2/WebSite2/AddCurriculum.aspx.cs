@@ -129,12 +129,7 @@ public partial class AddCurriculum : System.Web.UI.Page
         }
     }
 
-    protected void BTN_Back_Click(object sender, EventArgs e)
-    {
 
-        Response.Redirect("MyAccount.aspx");
-
-    }
 
    
     protected void gvUsers_RowEditing(object sender, GridViewEditEventArgs e)

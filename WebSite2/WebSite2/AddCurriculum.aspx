@@ -388,11 +388,6 @@
             </ul>
         </nav>
 
-        <div class="buttonDane">
-            <asp:Button ID="BTN_Back" runat="server" Text="Back" OnClick="BTN_Back_Click" /><br />
-            <br />
-        </div>
-
         <div class="subLabel">
 
             <asp:Label ID="titleLbl" runat="server" Text=" "></asp:Label>

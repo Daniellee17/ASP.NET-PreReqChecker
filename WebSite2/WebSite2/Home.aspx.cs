@@ -82,7 +82,14 @@ public partial class Home : System.Web.UI.Page
             Response.Redirect("Registration.aspx");
         }
     }
+    protected void BTN_View_Click(object sender, EventArgs e)
+    {
+        Session["new"] = DropDownList2.SelectedValue;
 
+        Response.Redirect("AddCurriculum.aspx");
+
+
+    }
     protected void LB_home_Click(object sender, EventArgs e)
     {
         Response.Redirect("Home.aspx");

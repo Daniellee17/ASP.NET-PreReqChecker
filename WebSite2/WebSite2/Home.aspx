@@ -21,6 +21,25 @@
             font-family: mech;
         }
 
+        .ddl {
+            border: 1px solid WHITE;
+            background: rgba(0,0,0,0.5);
+            top: 66%;
+            position: absolute;
+            left: 50%;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            color: #fff;
+            font-size: 27px;
+            display: inherit inline;
+            transform: translate(-50%,-50%);
+            box-sizing: border-box;
+            padding: 15px 25px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: banger;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -222,20 +241,18 @@
         <div class="buttons">
             <div class="hide" id="hideID" runat="server">
 
-                <asp:Button ID="BTN_118" runat="server" Text="ID 118 and Above" OnClick="BTN_118_Click" Style="top: 67%; left: 51%;" />
-                <br />
-                <br />
-                <asp:Button ID="BTN_115" runat="server" Text="ID 117 and Below" OnClick="BTN_115_Click" Style="top: 67%; left: 40%;" />
-                <br />
-                <br />
+                <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" CssClass="ddl" Width="98%" DataSourceID="SqlDataSource2" DataTextField="Year" DataValueField="Year" Style="top: 67%; width: 205px; left: 40%;" >
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ageDBConnectionString %>" SelectCommand="SELECT DISTINCT [Year] FROM [yearTbl] ORDER BY [Year]"></asp:SqlDataSource>
+                <asp:Button ID="BTN_View" runat="server" Text="View" OnClick="BTN_View_Click"  Style="top: 67%; width: 205px; left: 51%;"  />
             </div>
 
-               <div class="hideUser" id="hideUserID" runat="server">
+            <div class="hideUser" id="hideUserID" runat="server">
 
-                
+
                 <asp:Button ID="BTN_User" runat="server" Text="My Flowchart" OnClick="BTN_User_Click" Style="top: 67%; width: 205px; left: 51%;" />
-             
-              
+
+
             </div>
 
             <asp:Button ID="BTN_ContactUs" runat="server" Text="Contact Us" OnClick="BTN_ContactUs_Click" Style="top: 67%; width: 205px; left: 62%;" />
