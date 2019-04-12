@@ -12,9 +12,12 @@ public partial class Courses115 : System.Web.UI.Page
     string connectionString = @"Data Source=MSI-DANE;Initial Catalog=ageDB;Integrated Security=True;";
     int admin = 0;
     int loggedin = 0;
+    string yearStr;
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        yearStr = Session["new"].ToString();
+        Label4.Text = Session["new"].ToString() + " Curriculum Overview";
 
         this.UnobtrusiveValidationMode =
             System.Web.UI.UnobtrusiveValidationMode.None;
@@ -73,7 +76,8 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 1'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 1'", sqlCon);
+             
                 sqlDa.Fill(dtbl);
 
             }
@@ -108,7 +112,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 2'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 2'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -143,7 +147,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 3'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 3'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -178,7 +182,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 4'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 4'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -213,7 +217,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 5'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 5'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -248,7 +252,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 6'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 6'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -283,7 +287,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 7'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 7'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -318,7 +322,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 8'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 8'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -353,7 +357,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 9'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 9'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -388,7 +392,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 10'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 10'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -423,7 +427,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 11'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 11'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -458,7 +462,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 12'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 12'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -493,7 +497,7 @@ public partial class Courses115 : System.Web.UI.Page
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dB2015 WHERE TermNo = 'Term 13'", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM [dB" + yearStr + "] WHERE TermNo = 'Term 13'", sqlCon);
                 sqlDa.Fill(dtbl);
 
             }
@@ -1510,6 +1514,8 @@ public partial class Courses115 : System.Web.UI.Page
         }
 
     }
+
+  
     protected void gvUsers13_RowCommand(object sender, GridViewCommandEventArgs e)
     {
 

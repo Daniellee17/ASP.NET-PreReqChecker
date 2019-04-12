@@ -37,7 +37,7 @@
 
         .subLabel {
             top: 15%;
-            left: 85%;
+            left: 88%;
             width: 100%;
             position: absolute;
             transform: translate(-50%,-50%);
@@ -46,7 +46,7 @@
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            font-size: 40px;
+            font-size: 43px;
             color: white;
         }
 
@@ -601,7 +601,7 @@
 
         <div class="subLabel">
 
-            <asp:Label ID="Label4" runat="server" Text="2015 CURRICULUM CHECKLIST"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text=" "></asp:Label>
 
 
         </div>

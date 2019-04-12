@@ -388,13 +388,17 @@
             </ul>
         </nav>
 
+        <div class="buttonDane">
+            <asp:Button ID="BTN_Back" runat="server" Text="BACK" OnClick="BTN_Back_Click" />
+        </div>
+
         <div class="subLabel">
 
             <asp:Label ID="titleLbl" runat="server" Text=" "></asp:Label>
 
 
         </div>
-      
+
         <div class="gridviewBox">
 
 
@@ -433,7 +437,7 @@
                             <asp:TextBox ID="txtTermNo" Text='<%# Eval("TermNo") %>' runat="server" />
                         </EditItemTemplate>
                         <FooterTemplate>
-                              <asp:TextBox ID="txtTermNoFooter" runat="server" />
+                            <asp:TextBox ID="txtTermNoFooter" runat="server" />
                         </FooterTemplate>
                     </asp:TemplateField>
 

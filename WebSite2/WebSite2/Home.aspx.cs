@@ -86,7 +86,7 @@ public partial class Home : System.Web.UI.Page
     {
         Session["new"] = DropDownList2.SelectedValue;
 
-        Response.Redirect("AddCurriculum.aspx");
+        Response.Redirect("Courses115.aspx");
 
 
     }
